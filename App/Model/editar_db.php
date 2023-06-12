@@ -1,9 +1,11 @@
 <?php
+
 require_once "_conexao/conexao.php";
 require_once 'class-log.php';
 
 $classLog = new log();
 $dados_usuario = $classLog->findUser([" ID_user = ".$_SESSION['ID_user']]);
+
 
 
 if(isset($_POST['deleteBanner']))
@@ -28,15 +30,27 @@ if(isset($_POST['atualizar']) && isset($_SESSION['ID_user']))
     $pix = filter_var($_POST['pix'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     
     $padrao = "/^@[a-z0-9\-\_\&]{3,22}$/";
-    
+
+    if($nome == null){
+        $_SESSION['msg-perfil-edit'] = "Ocorreu um erro com o nome do usuário, verifique-o e tente novamente."; 
+        header("location: ../View/pages/editar-perfil.php");
+        die();
+    }
+
+    if($codigo == null){
+        $_SESSION['msg-perfil-edit'] = "Ocorreu um erro com o código do usuário, verifique-o e tente novamente."; 
+        header("location: ../View/pages/editar-perfil.php");
+        die();
+    }
+   
     if(!preg_match($padrao, $codigo))
     {
-        $_SESSION['error_code_update'] = "error";
-        header("location: ../View/pages/editar_perfil.php");
+        $_SESSION['msg-perfil-edit'] = "Erro: Verifique seu código de perfil ou adicione '@' <br> como primeiro caractere, exemplo: '@seu_nome'.";
+        header("location: ../View/pages/editar-perfil.php");
         die();
     } 
     
-
+   
 
     // if(!getimagesize($_FILES["foto"]["tmp_name"])){
     //     $flag = 0;
@@ -72,7 +86,8 @@ if(isset($_POST['atualizar']) && isset($_SESSION['ID_user']))
         }
         else
         {
-            echo  $message = "Não foi possível fazer upload";
+            $_SESSION['msg-perfil-edit'] = "Não foi possível fazer upload";
+            header("location: ../View/pages/editar-perfil.php");
             die();
         }
     }
@@ -84,7 +99,8 @@ if(isset($_POST['atualizar']) && isset($_SESSION['ID_user']))
         }
         else
         {
-            echo $message = "Formato inválido: ".$extensionFile; 
+            $_SESSION['msg-perfil-edit'] = "Formato do arquivo da imagem de perfil, '.$extensionFile', é inválido. Apenas aceitamos os formatos de arquivos: .png, .jpeg, .jpg, .gif, .jfif, .bmp, .svg e .webp"; 
+            header("location: ../View/pages/editar-perfil.php");
             die();
         }       
     }
@@ -113,7 +129,8 @@ if(isset($_POST['atualizar']) && isset($_SESSION['ID_user']))
         }
         else
         {
-            echo  $message = "Não foi possível fazer upload";
+            $_SESSION['msg-perfil-edit'] = "Não foi possível fazer upload. Tente novamente."; 
+            header("location: ../View/pages/editar-perfil.php");
             die();
         }
     }
@@ -125,7 +142,8 @@ if(isset($_POST['atualizar']) && isset($_SESSION['ID_user']))
         }
         else
         {
-            echo $message = "Formato inválido: ".$extensionFileBanner; 
+            $_SESSION['msg-perfil-edit'] = "Formato do arquivo da imagem do banner, '.$extensionFileBanner', é inválido. Apenas aceitamos os formatos de arquivos: .png, .jpeg, .jpg, .gif, .jfif, .bmp, .svg e .webp"; 
+            header("location: ../View/pages/editar-perfil.php");
             die();
         }       
     }
@@ -143,6 +161,7 @@ if(isset($_POST['atualizar']) && isset($_SESSION['ID_user']))
     $conn->bindValue(":cpix", $pix);
     $conn->execute();
 
-    header("location: ../View/pages/Perfil.php?user=".$_SESSION['ID_user']);
+    $_SESSION['msg-perfil-edit'] = "Perfil atualizado"; 
+    header("location: ../View/pages/editar-perfil.php");
     die();
 }

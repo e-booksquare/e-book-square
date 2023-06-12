@@ -211,3 +211,21 @@ form{
     width: 60px;
     padding: 10px;
 }
+
+.msg-perfil-edit{
+    background-color: gold;
+    padding: 10px 20px;
+    border-radius: 8px 0px 8px 0px;
+    border: 1px solid black;
+    position: fixed;
+    top: 10px; 
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.msg-perfil-edit p{
+    color: black;
+    font-weight: 600;
+}

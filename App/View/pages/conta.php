@@ -18,7 +18,7 @@ include_once '../../Model/verificacao.php';
 <body>
 <?php include_once 'header.php'; ?>
 
-        <main id="main">
+        <main id="main main_conta">
        
 
             <nav class="navegacao">
@@ -56,7 +56,7 @@ include_once '../../Model/verificacao.php';
         <div class="ModalExcluir" id="ModalExcluir">
             <div class="ContainerModal">
                 <p>Realmente deseja excluir a sua conta, sua conta e todas as suas obras serão apagadas permanentemente</p>
-                <div style="display: flex;gap: 20px;">
+                <div id="btnsAction">
                     <button onclick="CancelarModalExcluir()"class="BotaoCancelar" >Cancelar</button>
                     <form action="../../Model/deletar-usuariobd.php?deluser=1" method="post">
                         <button class="BotaoExcluir" type="submit">Excluir</button>

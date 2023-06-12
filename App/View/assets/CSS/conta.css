@@ -62,3 +62,9 @@
 .filtro{
     filter: blur(4px)
 }
+
+#btnsAction{
+    display: flex;
+    gap: 20px;
+}
+

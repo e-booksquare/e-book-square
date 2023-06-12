@@ -1,5 +1,13 @@
 <?php
 include_once '../../Model/verificacao.php';
+
+$sessionAlter = 0;
+$msgSessionAlter = "";
+
+if(isset($_SESSION['msg-perfil-edit']) ){
+    $sessionAlter = true;
+    $msgSessionAlter = $_SESSION['msg-perfil-edit'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -111,5 +119,28 @@ include_once '../../Model/verificacao.php';
     <script src="../assets/JAVASCRIPT/Selecionar.js"></script>
     <script src="../assets/JAVASCRIPT/header.js"></script>
 </body>
+
+<script>
+    $(document).ready(function (){
+        function getMsgAlterPerfil($msgSession){
+            let msgHTML =  `<div class="msg-perfil-edit">
+                                <p>${$msgSession}</p>
+                            </div>`;
+
+            $("body").append(msgHTML);
+
+            setTimeout(() => {
+                $(".msg-perfil-edit").css("display", "none");
+            }, 14000);
+        }
+
+         if (<?=$sessionAlter?> != 0) { 
+             let msgSessionJS = `<?=$msgSessionAlter?> `;
+                getMsgAlterPerfil(msgSessionJS)
+                <?php unset($_SESSION['msg-perfil-edit']); ?>
+            } 
+      
+    })
+</script>
 
 </html>
