@@ -1,0 +1,293 @@
+.ver_mais{
+    margin-top: 150px;
+    margin: 150px 50px 50px 50px;
+}   
+
+
+.container_obra{
+    display: flex;
+    max-width: 500px;
+    width: 230px;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.categoria_pesquisa_filtro{
+    margin-top: 5px;
+    padding: 5px;
+    background-color: rgb(89, 93, 93);
+    border-radius: 10px;
+    display: inline-block;
+    flex-wrap: wrap;
+}
+
+.categorias_container{
+    flex-wrap: wrap;
+    width: 250px;
+}
+
+#searchbar{
+    padding-left: 15px;
+    font-size: 13pt;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 500px;
+    height: 40px;
+    outline:none;
+}
+
+#searchbar_fav{
+  padding-left: 15px;
+  font-size: 13pt;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 500px;
+  height: 40px;
+  outline:none;
+}
+
+.titulo_obra{
+  font-size: 15pt;
+  word-break: break-word;
+  font-weight: bold;
+  max-width: 150px;
+  text-align: center;
+  max-height: 51px;
+  min-height: 51px;
+}
+
+.barra_de_pesquisa{
+    display: inline-block;
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.icon_pesquisar{
+    position: absolute;
+    top:8px;
+    right: 15px;
+    font-size: 15pt;
+}
+
+.imagem_obra{
+    border-radius: 10px;
+    box-shadow:0px 0px 5px rgba(0, 0, 0, 0.338);
+    max-height: 270px;
+    min-height: 270px;
+    max-width: 170px;
+    min-width: 170px;
+    background-color: black;
+    object-fit: cover;
+}
+
+.texto{
+    font-size: 12pt;
+    font-style: italic;
+}
+
+
+.opcoes_obra{
+    border: 1px solid rgb(78, 78, 78);
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
+.opcoes_obra:hover{
+    background-color: rgb(189, 189, 189);
+}
+
+.opcoes_container{
+    position: relative;
+}
+
+.opcoes-dropdow{
+    box-shadow:0px 0px 5px rgba(0, 0, 0, 0.338);
+    border-radius: 10px ;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 170px;
+    position: absolute;
+    top: 0;
+}
+
+.opcoes-dropdow a{
+    width: 100%;
+    text-align: center;
+}
+.botoes_opcoes:hover{
+    background-color: rgb(235, 235, 235);
+}
+.botoes_opcoes{
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 45px;
+    width: 100%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.aberto{
+    display: inline-flex;
+}
+
+.excluir:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(252, 111, 111);
+}
+
+.conjunto-obra{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0 50px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilo do botão que aciona o dropdown */
+.menu{
+    list-style:none;
+    border:1px solid #c0c0c0;
+    float:left;
+}
+.menu li{
+    position:relative;
+    float:left;
+    border-right:1px solid #c0c0c0;
+}
+
+.menu li p{color:#333; text-decoration:none; padding:5px 10px; display:block;}
+
+.menu li .itens_drop{color:#333; text-decoration:none; padding:5px 10px; display:block;}
+
+.menu li .itens_drop:hover{
+background:#333;
+color: white;
+}
+
+.menu li .excluir:hover{
+    background:#f57676;
+    color: white;
+    }
+
+.menu li  ul{
+    position:absolute;
+    top:25px;
+    left:0;
+    background-color:#fff;
+    display:none;
+    z-index: 55;
+}
+
+.menu li:hover ul, .menu li.over ul{
+    display:block;
+}
+
+.menu li ul li{
+    border:1px solid #c0c0c0;
+    display:block;
+    width:150px;
+}
+/*Fim dropdown*/
+
+
+
+  .nav ul{
+    display: inline-flex;
+    list-style: none;
+    border: 1px solid rgb(148, 148, 148);
+    background-color: rgb(201, 201, 201);
+    border-bottom: none;
+  }
+
+  .abas_vermais{
+    font-size: 15pt;
+    padding: 10px;    
+    cursor: pointer;
+  }
+
+
+  .selecionado{
+    background-color: rgb(255, 255, 255);
+  }
+
+  .container_obras_abertas{
+    box-shadow:0px 0px 5px rgba(0, 0, 0, 0.338);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+  }
+  
+  .remover_fav{
+    padding: 10px;
+    background-color: #f05151;
+    color: white;
+  }
+  
+  #favoritos{
+    display: none;
+  }
+
+  .modal_excluir{
+    display: none;
+    background-color: rgb(255, 255, 255);
+    z-index: 55;
+    box-shadow:0px 0px 5px rgba(0, 0, 0, 0.338);
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .container_botoes_excluir{
+    display: flex;
+    justify-content: center ;
+    gap: 15px;
+  }
+
+  .botao_container_excluir{
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 14pt;
+    margin-top: 10px;
+    
+  }
+
+  .cancelar{
+    cursor: pointer;
+    background-color: rgb(65, 65, 65);
+  }
+  .excluir_modal{
+    background-color: rgb(253, 50, 50);
+  }
+
+  .travar{
+    overflow-y: hidden;
+  }
+
+  .filtro{
+    filter: blur(4px);
+  }

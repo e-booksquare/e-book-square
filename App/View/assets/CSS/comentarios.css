@@ -1,0 +1,169 @@
+.comentario{
+    margin: 50px 50px;
+}
+.container_escrever_comentario{
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.imagem_nome_span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.imagem_nome_span div{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.ImagemUser_escrever_comentario{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.NomeUser_escrever_comentario{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.escrever_comentario{
+    margin: 10px 20px 5px;
+}
+.escrever_comentario textarea{
+    background-color: #F3EFEF;
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.enviar{
+    display: flex;
+    justify-content: right;
+    margin: 0px 20px;
+}
+
+.enviar [type=submit]{
+    border-radius: 4px;
+    font-size: 18px;
+    color: white;
+    background-color: #FF002E;
+    width: 100px;
+    border: none;
+    height: 35px;
+    cursor: pointer;
+}
+
+.comentarioCaixa{
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+}
+.comentarioCaixa:first-child{
+    margin-top: 50px;
+}
+
+
+/*comentario publicado*/
+.comentario_publicado{
+    padding: 10px;
+
+}
+
+.texto_publicado{
+    display: flex;
+
+}
+
+.texto_publicado .texto{
+    margin: 10px 50px;
+    font-size: 18px;
+    position: relative;
+    
+}
+
+.texto_publicado .texto::before{
+    content: ' ';
+    height: 100%;
+    width: 2px;
+    display: block;
+    position: absolute;
+    left: -10px;
+    border-radius: 10px;
+    background-color: #A7A5A6;
+}
+
+.responder{
+    display: flex;
+    justify-content: right;
+}
+
+.responder p{
+    font-size: 13pt;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.codigo_user_comentario{
+    color: #FF002E;
+}
+
+
+/*resposta comentario*/
+
+.respostas_comentario_publicado{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 50px;
+}
+
+/*resposta comentario spoiler */
+
+.respostas_comentario_publicado_spoiler{
+    position: relative;
+    padding: 10px;
+    margin: 15px 25px;
+}
+
+.spoiler{
+    filter: blur(4px);
+}
+
+.ver_comentario_spoiler{
+    background-color: #ff002f;
+    border-radius: 5px;
+    height: 50px;
+    width: 250px;
+    z-index: 5;
+    cursor: pointer;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ver_comentario_spoiler p{
+    text-align: center;
+    color: white;
+}
+
+.resposta_da_resposta_comentario_publicado{
+    padding: 10px;
+
+}

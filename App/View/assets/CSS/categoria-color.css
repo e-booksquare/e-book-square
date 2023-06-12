@@ -1,0 +1,258 @@
+.classe_categoria{
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 15px;
+    margin: 5px 0;
+    white-space: nowrap;
+}
+
+.Ação{
+    background-color: rgb(253, 22, 22);
+    color: white;
+}
+.Aventura{
+    background-color: rgb(6, 112, 20);
+    color: white;
+}
+.Terror{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.Fantasia{
+    background-color: #94B0FF;
+    color: white;
+}
+.Humor{
+    background-color: rgb(238, 196, 10);
+    color: white;
+}
+.Ficção{
+    background-color: #7495F0;
+    color: white;
+}
+.Romance{
+    background-color: #e00083;
+    color: white;
+}
+.Conto{
+    background-color:#1D70A3;
+    color:white;
+}
+/* jhfdsaygtysafasytdfsatdf */
+
+.Apocalipse{
+    background-color: #AAD5F0;
+    color:white;
+}
+.Distopia{
+    background-color:#FFBE73;
+    color:white;
+}
+.Suspense{
+    background-color:#331436;
+    color:white;
+}
+.Policial {
+    background-color: #b60000b7;
+    color:white;
+}
+.Horror{
+    background-color: #FFD5AD;
+    color:white;
+}
+.Drama{
+    background-color:#30065f;
+    color:white;
+}
+.Ficçãohistórica{
+    background-color:#F9ADFF;
+    color:white;
+}
+.LGBTQ{
+    background-color:#BDE038;
+    color:white;
+}
+.Biografia{
+    background-color: #0e7b8b;
+    color:white;
+}
+.Nãoficção{
+    background-color:#39375c;
+    color:white;
+}
+.Gastronomia{
+    background-color: #8CBEB2;
+    color:white;
+}
+.Auto-ajuda{
+    background-color: #999999;
+    color:white;
+}
+.ArteeFotografia{
+    background-color:#009488;
+    color:white;
+}
+.Histórico{
+    background-color: #005A5B;
+    color:white;
+}
+.Crimesreais{
+    background-color: #142127;
+    color:white;
+}
+.Artesmarciais{
+    background-color: #d8c84e;
+    color:white;
+}
+.Viagem{
+    background-color:#86af94;
+    color:white;
+}
+.Religião{
+    background-color:#F24B88;
+    color:white;
+}
+.Faroeste{
+    background-color: #9e700c;
+    color:white;
+}
+.TecnologiaeCiência{
+    background-color: #425492;
+    color:white;
+}
+.RPG{
+    background-color:#046bac;
+    color:white;
+}
+.Guerra{
+    background-color: #E19516;
+    color:white;
+}
+.Poesia{
+    background-color:#4A0000;
+    color:white;
+}
+.Pós-Apocalipse{
+    background-color: #73223F;
+    color:white;
+}
+.ViagemnoTempo{
+    background-color: #8698D9;
+    color:white;
+}
+.SteamPunk{
+    background-color:#FF3D02;
+    color:white;
+}
+.Cyberpunk{
+    background-color: #4343a8;
+    color:white;
+}
+.Espaçosideral{
+    background-color: #DF2CAE;
+    color:white;
+}
+.Mistério{
+    background-color: #833000;
+    color:white;
+}
+.Investigação{
+    background-color: #685e5e;
+    color:white;
+}
+.Ficçãofeminina{
+    background-color:#AC8491;
+    color:white;
+}
+.Medieval{
+    background-color: #FF8000;
+    color:white;
+}
+.Orientemédio{
+    background-color: #FFC05F;
+    color:white;
+}
+.Samurai{
+    background-color: #9F28E7;
+    color:white;
+}
+.Isekai{
+    background-color: #586614;
+    color:white;
+}
+.Tensei{
+    background-color:#5D6F94;
+    color:white;
+}
+
+.Erótico{
+    background-color:#118aee;
+    color:white;
+}
+
+.RealismoMágico{
+    background-color:#f3aeae;
+    color:white;
+}
+
+.Conto{
+    background-color: #B12B24;
+    color:white;
+}
+
+.Magia{
+    background-color: #9cb4cb;
+    color:white;
+}
+
+.Artigoacâdemico{
+    background-color: #ff7857;
+    color:white;
+}
+
+.Saúdeebemestar{
+    background-color:#E45569;
+    color:white;
+}
+
+.Cultivação{
+    background-color:#965ed1;
+    color:white;
+}
+.Dorama{
+    background-color:#BFC85B;
+    color:white;
+}
+.Dramapolicial{
+    background-color:#4fcbd7;
+    color:white;
+}
+/* sfsafsf */
+.Paranormal{
+    background-color:#8d4e26;
+    color:white;
+}
+.Comédia{
+    background-color:#ff4183;
+    color:white;
+}
+.Novel{
+    background-color:#d82854;
+    color:white;
+}
+.Jogos{
+    background-color:#e9394b;
+    color:white;
+}
+.Alienígena{
+    background-color:#a01082;
+    color:white;
+}
+.Mercenário{
+    background-color:#8a2e2e;
+    color:white;
+}
+.Fanfic{
+    background-color:#683250;
+    color:white;
+}

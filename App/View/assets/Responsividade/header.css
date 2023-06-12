@@ -1,0 +1,25 @@
+@media screen and (max-width : 950px){
+    .block-right{
+        display: none;
+    }
+
+    .icon_lista{
+        font-size: 30pt;
+    }
+    .responsividade_header_lista_direira{
+        display: block;
+    }
+    .drop_direito_responsividade{
+        position: absolute;
+        background-color: black;
+        height: 200px;
+        width: 50px;
+        top: 60px;
+        right: -60px;
+        transition: 1s;
+}
+    .menu_aberto{
+        right: 0;
+    }
+
+}

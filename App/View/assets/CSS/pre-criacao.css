@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.header_titulo{
+    margin: 20px 50px;
+}
+.texto_titulo_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.listra{
+    background-color: black;
+    height: 1px;
+    width: 100%;
+}
+.texto_minhas_ob{
+    font-size: 24pt;
+}
+
+.criar_nova_obra{
+    cursor: pointer;
+    color: white;
+    background-color: #d40743;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14pt;
+}
+
+.criar_nova_obra:hover{
+    background-color: #b4063b;
+}
+
+.info_obra{
+    width: 100%;
+}
+
+.container_obra{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 80px 160px 80px;
+  border-bottom: 1px solid black;
+}
+
+.obra{
+    padding: 20px 20px 0 20px;
+    height: auto;
+    width: 60%;
+    border: 1px solid black;
+    margin-top: 30px;
+}
+
+.mesma_linha{
+    display: flex;
+}
+.titulo_editar_3pontos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.opcoes_canto{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.imagem_obra{
+    object-fit: cover;
+    user-select: none;
+    margin-right: 20px;
+    width: 200px;
+    height: 300px;
+    box-shadow:0px 0px 5px rgba(0, 0, 0, 0.338);
+    border-radius: 10px;
+}
+
+.add_cap{
+    background-color: white;
+    padding: 8px;
+    font-size: 12pt;
+    border: 1px solid #d40743;
+    border-radius: 5px;
+}
+
+.add_cap:hover{
+   background-color: #b60138;
+   color: white;
+}
+
+.editar{
+    background-color: white;
+    padding: 8px;
+    font-size: 12pt;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+.editar:hover{
+    background-color: #000000;
+   color: white;
+}
+
+.container_pontos{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.negrito{
+    font-weight: 600;
+}
+
+.p_info{
+    padding: 5px 0;
+}
+.atualizado{
+    float: right;
+}
+
+.ver_mais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.ver_mais:hover{
+    text-decoration: underline;
+}
+
+.nao_tem_obras{
+    margin-bottom: 20px;
+    font-size: 15pt;
+    color: #2e2e2e;
+}
+
+main{
+    min-height: 100%;
+    padding-bottom: 200px;
+}
+
+footer{
+    margin-top: -274px;
+}

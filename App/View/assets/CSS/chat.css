@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+body{
+    background-color: #16171B;;
+}
+
+#chatList{
+    float: left;
+    width: 30%;
+    height: 100vh;
+    background-color: #20232C;
+}
+
+
+.containerChatList{
+    width: 95%;
+    height: 100%;
+    padding: 20px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleChatList{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+#titleChat{
+    font-size: 2rem;
+}
+
+.searchChatList{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin: 20px 0 30px;
+}
+
+#inputSearchChatList{
+    width: 90%;
+    padding: 0 10px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid rgb(48, 48, 48);
+    color: rgb(238, 238, 238);
+    background-color: #16171B;
+}
+
+#dropdownSearchChat{
+    z-index: 56;
+    position: absolute;
+    left: 1%;
+    top: 16.9%;
+    width: 390px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.338);
+    animation: dropdownSearchChat .4s 1 alternate ease-in-out forwards;
+  }
+  
+  @keyframes dropdownSearchChat {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .hidden{
+     display: none;
+  }
+
+  #listBoxSearchChat{
+      width: 90%;
+      height: 100%;
+      padding: 10px 0;
+      margin: 0 auto;
+  }
+
+  .itemSearchChat{
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 15px;
+      cursor: pointer;
+      border-right:  1px solid #524cbd;
+  }
+  .itemSearchChat:hover{
+      background-color: #000000;
+  }
+
+  .profileImageSearchChat img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-size: contain;
+    background-position: center;
+  }
+
+.boxChatList{
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+}
+
+.boxChatList::-webkit-scrollbar{
+    width: 14px;
+    background-color: #1D1E23;
+    /* border: 1px solid black; */
+    border-radius: 6px;
+}
+
+.boxChatList::-webkit-scrollbar-thumb{
+    background-color: #524cbd;
+    border-radius: 6px;
+}
+
+
+.itemChatList{
+    width: 98%;
+    height: 90px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.itemChatList:hover{
+  background-color: #1d1e239a;
+  cursor: pointer;
+}
+
+.profileImageBoxItem img{
+    width: 75px;
+    height: 75px;
+    border-radius: 37.5px;
+    background-size: contain;
+    background-position: center;
+}
+
+.divNotify{
+    background-color: #524cbd;
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+    position: absolute;
+    right: 2%;
+    top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numberNotify{
+    color: white;
+    font-weight: 600;
+}
+
+.nameUserItem{
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+
+.messageUserItem{
+    font-size: 14px;
+}
+
+.dateTimeUserItem{
+    font-size: 13px;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+}
+
+#conversation{
+    float: right;
+    width: 70%;
+    height: 100vh;
+}
+
+.userConversationHeader{
+    width: 100%;
+    background-color: black;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+#noChatContainer{
+    width: 100%;
+    height: 100%;
+    background-color:  #16171B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#noChatContainer .content{
+    font-size: 2rem;
+}
+
+.contentConversationHeader{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profileImageConversationHeader img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-size: contain;
+    background-position: center;
+}
+
+.nameUserConversationHeader{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.dropdownConversation svg{
+    cursor: pointer;
+}
+
+#chatMessageBox{
+    width: 100%;
+    height: 82vh;
+    background-color: #1D1E23;
+    padding-top: 10px;
+}
+
+#inputMessageConversationBox{
+    width: 100%;
+    height: 9vh;
+    background-color: #1D1E23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#containerInputConversation{
+    width: 70%;
+    height: 37px;
+    position: relative;
+}
+
+#inputChatMessage{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 45px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 1px 1px #514CBD;
+    font-size: 17px;
+    color: rgb(238, 238, 238);
+    background-color: #16171B;
+}
+
+#containerInputConversation svg{
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    transform: rotateZ(30deg);
+    cursor: pointer;
+}
+
+.contentMessageChat{
+    margin: 12px 0 0;
+    width: 100%;
+    padding: 0 10px;
+    float: left;
+    display: flex;
+    justify-content: start;
+}
+.me{
+    width: 100%;
+    float: right;
+    display: flex;
+    justify-content: end;
+}
+
+.messageChatContainer{
+    max-width: 45%;
+}
+
+.meTimeMessage, .meMessageChat{
+    text-align: right;
+}
+.timeMessageChat{
+    color: rgb(208, 208, 208);
+    font-size: 11px;
+}
+.messageChat{
+    margin: 7px 0 5px;
+    background-color: black;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    color: rgb(238, 238, 238);
+    font-weight: 500;
+}
+
+.meMessageChat{
+    background-color: #514CBD;
+}
+
+ #chatMessageBox{
+    overflow-y: scroll;
+    width: 100%;
+    height: 82vh;
+}
+
+ #chatMessageBox::-webkit-scrollbar{
+    width: 14px;
+    background-color: #20232C;
+    /* border: 1px solid black; */
+    border-radius: 6px;
+}
+
+#chatMessageBox::-webkit-scrollbar-thumb{
+    background-color: #524cbd;
+    border-radius: 6px;
+}
+
+

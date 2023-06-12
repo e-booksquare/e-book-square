@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+body{
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1140px;
+    height: 100%;
+    padding: 0 15px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #logo{
+    width: 65px;
+  }
+
+  #nav-livre li{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+  }
+  
+  .bi {
+    margin-top: 5px;
+    color: rgb(49, 49, 49);
+  }
+  
+  #input-search{
+    border-radius: 3px;
+    outline-style: none;
+    width: 265px;
+    height: 27px;
+    padding: 4px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.616);
+  }
+  
+  #input-search::placeholder{
+    font-style: italic;
+  }
+
+
+  #icon-languages{
+    width: 20px;
+  }
+  .fazer_login{
+    text-align: center;
+  }
+  .hero{
+    margin-bottom: 150px;
+  }
+  .hero .container{
+    margin-top: 80px;
+  }
+
+  .hero .content-box{
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1{
+    font-family:'Source Sans Pro', sans-serif !important;
+    font-size: 3.4rem !important;
+    font-weight: bold !important;
+    margin-bottom: 40px !important;
+  }
+
+  h2{
+    font-family:'Source Sans Pro', sans-serif !important;
+    font-size: 2.2rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 15px !important;
+  }
+
+  p{
+    font-family:'Source Sans Pro', sans-serif;
+    font-size: 1.2rem ;
+  }
+
+  .buttons-iniciar{
+    display: flex;
+    margin-top: 20px;
+  }
+
+  #iniciar-secundário{
+    margin-left: 20px;
+  }
+
+  .iniciar{
+    width: 200px;
+    height: 50px;
+    background-color: #d40743;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    font-family:'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .iniciar:hover{
+    filter: brightness(0.6);
+  }
+
+#img-hero{
+    width: 450px;
+}
+
+main{
+  min-height: 100%;
+  padding-bottom: 200px;
+}
+
+footer{
+  margin-top: -274px;
+}

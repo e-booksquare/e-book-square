@@ -1,0 +1,64 @@
+.container_icon{
+    border-radius: 100%;
+    background-color: #E20338;
+    position: absolute;
+    right: -30px;
+    margin: auto;
+    top: 150px;
+}
+.ModalExcluir{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 150px;
+    width: 600px;
+    display: none;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgb(150, 150, 150);
+}
+
+.ContainerModal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ContainerModal button{
+    text-align: center;
+    font-size: 15pt;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.ContainerModal p{
+    text-align: center;
+}
+
+.BotaoExcluir{
+    background-color: rgb(255, 78, 78);
+    color: white;
+}
+
+.BotaoCancelar{
+    background-color: rgb(65, 65, 65);
+    color: white;
+}
+
+.BotaoExcluir:hover{
+    background-color: rgb(253, 58, 58);
+}
+
+.BotaoCancelar:hover{
+    background-color: rgb(46, 46, 46);
+}
+
+.filtro{
+    filter: blur(4px)
+}

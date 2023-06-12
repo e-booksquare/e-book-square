@@ -1,0 +1,61 @@
+@media only screen and (max-width:1280px){
+    main{
+        transform: scale(0.8);
+    }
+}
+
+@media only screen and (max-height:600px){
+    main{
+        transform: scale(0.75);
+    }
+}
+
+@media only screen and (max-width:1000px){
+    main{
+        transform: scale(0.65);
+    }
+}
+@media only screen and (max-width:818px){
+    .ao_Lado{
+        display: none;
+    }
+    body{
+        background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+    }
+    main{
+        display: none;
+        box-shadow: none;
+        transform: scale(1);
+    }
+    .container{
+        height: 100%;
+    }
+    .titulo{
+        font-size: 400%;
+    }
+    .conteudo input{
+        width: 90%;
+        font-size: 25px;
+        border-bottom: 2px solid rgb(9, 114, 211);
+    }
+    .mobile{
+        display: flex;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    #olho{
+        right: 1%;
+    }
+    #olho_mob{
+        right: 1%;
+    }
+    .entrada input{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:412px){
+    main{
+        transform: scale(0.55);
+    }
+}

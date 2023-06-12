@@ -1,0 +1,16 @@
+.container_icon{
+    border-radius: 100%;
+    background-color: #E20338;
+    position: absolute;
+    right: -30px;
+    margin: auto;
+    top: 170px;
+}
+.container_icon1{
+    border-radius: 100%;
+    background-color: #E20338;
+    position: absolute;
+    left: -30px;
+    margin: auto;
+    top: 170px;
+}

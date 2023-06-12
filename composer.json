@@ -1,0 +1,15 @@
+{
+    "name": "alunos/e_book_square",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Augusto",
+            "email": "gabrielsilva.webdeveloper@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,30 @@
+.botao_seguir{
+    cursor: pointer;
+    height: 36px;
+    width: 110px;
+    font-size: 15pt;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid red;
+    background-color: rgb(250, 58, 58);
+}
+.botao_seguir:hover{
+    background-color: red;
+}
+
+.Seguir span{
+    font-weight: 900;
+    color: white;
+    font-size: 17pt;
+}
+
+.botao_seguir-borda{
+    background-color: white;
+    cursor: pointer;
+    height: 36px;
+    width: 110px;
+    font-size: 15pt;
+    color: rgb(255, 0, 21);
+    border-radius: 10px;
+    border: 2px solid rgb(255, 0, 21);
+}

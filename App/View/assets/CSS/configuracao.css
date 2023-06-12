@@ -1,0 +1,183 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #D8D8D8
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    padding-bottom: 200px;
+}
+
+.navegacao ul{
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.opcao{
+    list-style: none;
+    cursor: pointer;
+    color: #E2033880;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14pt;
+}
+.selecionado{
+    color: white;
+    background-color: #E20338;
+}
+
+.config{
+    min-height: 380px;
+    position: relative;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 30px 0 45px 45px ;
+    border-radius: 13px;
+    background-color: white;
+    box-shadow: 0 4px 4px #0000003d;
+}
+
+.informacoes p{
+    margin-top: 15px;
+
+}
+.informacoes input{
+    border-radius: 8px;
+    font-size: 12pt;
+    border: 1px solid #AFAFAF;
+    padding: 4px 10px;
+}
+
+
+
+
+
+/* CONTA */
+.texto_topicos{
+    font-weight: 600;
+    font-size: 12pt;
+}
+.mudar{     
+    color: #E20338;
+    margin-left: 10px;
+}
+.mudar:hover{
+    text-decoration:underline;
+}
+
+.idioma{
+    font-size: 12pt;
+    padding: 7px;
+    background-color: #FAF6F6;
+    border: 1px solid #A4A4A4;
+}
+.botao_salvar{
+    margin: 0 auto;
+    margin-top: 50px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #2B2A2A;
+    border: none;
+    padding: 11.5px 21px;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+.botao_salvar:hover{
+cursor: pointer;
+filter: brightness(0.6);
+}
+.botao_salvar_div{
+    display: flex;
+    justify-content: center;
+}
+.excluir{
+    width: 50%;
+    margin-bottom: 20px;
+    color: #FF0000;
+    font-size: 15pt;
+}
+.excluir:hover{
+    text-decoration:underline;
+}
+.icone_not{
+    padding: 15px;
+}
+
+
+
+
+
+/*NOTIFICAÇÃO */
+
+.texto_um{
+    margin-bottom: 40px;
+}
+input[type=checkbox]{
+    margin-right: 5px;
+}
+.texto_checkbox{
+    font-weight: 600;
+}
+.lista_notificacao{
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.lista_notificacao ul li{
+    padding-top: 5px;
+}
+
+/*BLOQUEIOS*/
+
+.titulo_block{
+    font-weight: 600;
+    font-size: 15pt;
+    text-align: center;
+    margin: 10px;
+}
+.letras_miudas_block{
+    font-size: 12pt;
+    text-align: center;
+}
+.container_usuario_block{
+    gap:20px;
+    align-items: center;
+    display: flex;
+    border: 1px solid black;
+    padding: 7px 0 7px 30px;
+    border-radius: 10px;
+}
+.tirar_block{
+    margin-left: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.lista_blocks{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+footer{
+    margin-top: -274px;
+}

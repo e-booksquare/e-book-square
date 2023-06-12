@@ -1,0 +1,579 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 50px;
+}
+
+.categoria {
+  display: flex;
+  bottom: 5px;
+  right: 5px;
+  flex-wrap: wrap;
+  max-width: 600px;
+  gap: 8px;
+}
+.classe_categoria {
+  padding: 4px 10px;
+}
+
+.Titulo_obra {
+  font-size: 15pt;
+  font-weight: 300;
+  color: rgb(82, 82, 82);
+  border: 1px solid black;
+  padding: 5px 5px 5px 30px;
+  border-radius: 10px;
+}
+
+.Nome_autor {
+  font-weight: 600;
+  font-size: 12pt;
+  text-align: center;
+}
+
+.nome_autor_denuncia {
+  gap: 50px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.idade_14 {
+  height: 48px;
+  width: 48px;
+}
+
+.container_idade_opcoes {
+  display: flex;
+  gap: 15px;
+}
+
+.add_favo_denun {
+  gap: 15px;
+  height: 48px;
+  margin-left: 100px;
+  width: auto;
+  /* border-radius: 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+
+.bi-exclamation-triangle {
+  user-select: none;
+}
+
+.bi-exclamation-triangle:hover {
+  color: rgb(255, 0, 0);
+}
+.bi-bookmark-star:hover {
+  color: goldenrod;
+}
+
+.bi-person-plus:hover {
+  color: blue;
+}
+.icon {
+  color: black;
+  height: 25px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.info_obra {
+  display: flex;
+}
+
+.imagem_historia {
+  min-height: 500px;
+  min-width: 300px;
+  max-height: 500px;
+  max-width: 300px;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0px #a9a2a2;
+}
+
+.imagem_historia img {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.titulo_info {
+  font-weight: 600;
+}
+
+.sobre_obra {
+  margin-left: 15px;
+}
+.sinopse {
+  margin-bottom: 20px;
+  word-break: break-all;
+}
+.caracteristicas {
+  line-height: 25px;
+}
+
+.capitulos {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.global_cap {
+  display: inline;
+}
+.container_capitulo {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 12px 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.container_capitulo a {
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.container_capitulo p {
+  color: white;
+}
+
+.container_capitulo span {
+  color: white;
+}
+
+.total_cap {
+  font-size: 15pt;
+}
+
+.bi-hand-thumbs-up:hover {
+  color: green;
+}
+
+.obras_recent_autor {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container_obras_recent_autor {
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo_obras_recen {
+  font-size: 18pt;
+  margin-bottom: 15px;
+}
+
+.container_historias {
+  display: flex;
+  gap: 15px;
+  max-width: 1000px;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.nome_historia_recente {
+  max-width: 176px;
+  word-break: break-all;
+  text-align: center;
+  height: 50px;
+}
+
+.obra img {
+  object-fit: cover;
+  border-radius: 10px;
+  height: 300px;
+  width: 200px;
+}
+
+.obra {
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.likes_da_obra {
+  display: flex;
+}
+.linha {
+  background-color: black;
+  height: auto;
+  width: 1px;
+}
+.container_comentario {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 10px;
+}
+.container_responder_comentario {
+  margin-left: 50px;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 10px;
+}
+
+.container_comentario_texto_publicado {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  border-radius: 10px;
+}
+
+.texto_comentario {
+  margin-left: 10px;
+  display: flex;
+  gap: 10px;
+  word-break: break-all;
+}
+
+.texto_comentario::before {
+  content: "";
+  display: block;
+  min-width: 4px;
+  max-width: 4px;
+  height: 100%;
+  border-radius: 10px;
+  background: #494949;
+  margin: 0 auto;
+}
+
+.comentario_texto textarea {
+  background-color: #dad9d9;
+  border: 1px solid #585858;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  resize: none;
+  font-size: 12pt;
+  border: none;
+}
+
+.comentario_texto button {
+  margin-top: 5px;
+  float: right;
+  height: 35px;
+  padding: 0 10px;
+  font-size: 13pt;
+  border: 1px solid #d4415b;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+.comentario_texto button:hover {
+  color: white;
+  background-color: #d4415b;
+}
+
+.comentarios {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.data_denunciar {
+  display: flex;
+  justify-content: right;
+}
+
+.icon_nome {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.comentario_texto {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.imagem_usuario_atual {
+  object-fit: cover;
+  width: 55px;
+  height: 55px;
+  padding: 3px;
+  border: 1px solid blue;
+  border-radius: 100%;
+}
+
+.icon {
+  font-size: 20pt;
+}
+
+.titulo_capitulo {
+  min-width: 220px;
+  max-width: 220px;
+  white-space: nowrap;
+}
+
+.header_comentario {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ResponderComentario {
+  margin-top: 10px;
+  text-align: right;
+  cursor: pointer;
+}
+.ResponderComentario:hover {
+  color: rgb(112, 112, 112);
+}
+
+.spoiler {
+  display: flex;
+  gap: 5px;
+}
+
+.nada {
+  display: none;
+}
+
+.aqui {
+  display: block;
+}
+
+.container_comentario_spoiler {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 10px;
+  position: relative;
+}
+
+.ver_comentario_spoiler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 40px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d40743;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.container_comentario_texto_publicado_spoiler {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 10px;
+}
+
+.filtro {
+  filter: blur(4px);
+}
+
+.textarea_responder_comentario {
+  margin: 20px 0 10px 50px;
+  border-radius: 10px;
+  border: 1px solid rgb(201, 201, 201);
+  padding: 10px;
+}
+
+.botao_enviar_direito {
+  display: flex;
+  justify-content: right;
+}
+
+.icon_cap {
+  color: white;
+  font-size: 15pt;
+}
+
+.opcoes_ExcluirEditar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.container_historia_adulta {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: orange;
+  margin: 20px 50px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.text_historia_adulta {
+  text-align: center;
+  font-size: 17pt;
+}
+.opcoes_ExcluirEditar button {
+  background-color: black;
+  border: none;
+  text-align: center;
+}
+
+.carousel {
+  /* width: 20%; */
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel-slide .item {
+  width: 100%;
+}
+.carousel-slide .item2 {
+  width: 100%;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.item {
+  background-color: red;
+  width: 150px;
+  height: 250px;
+}
+.item2 {
+  background-color: rgb(19, 17, 17);
+  width: 150px;
+  height: 250px;
+}
+
+.info_mais_obras {
+  width: 356px;
+  /* margin-top: 10px; */
+  padding: 10px;
+}
+
+.info_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.obra_imagem {
+  max-height: 300px;
+  max-width: 180px;
+  min-height: 300px;
+  min-width: 180px;
+}
+
+.descricao_mais_obra {
+  margin: 10px 0;
+  word-break: break-word;
+}
+
+.swiper-container {
+  width: 500px;
+  height: 300px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_novo_cap {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.add_novo_cap a {
+  border-radius: 10px;
+  background-color: #d40743;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13pt;
+  color: white;
+  height: 50px;
+  width: 250px;
+}
+
+.add_novo_cap a:hover {
+  background-color: #eb2560;
+  cursor: pointer;
+}
+
+p {
+  /* margin-top: 0; */
+  margin-bottom: 0rem !important;
+}
+
+.modal-header h1 {
+  font-weight: bold;
+}
+
+textarea#message-text {
+  height: 150px;
+}
+textarea#message-text::placeholder {
+  font-style: italic;
+  font-size: 14px;
+}
+
+label.col-form-label {
+  margin-bottom: -5px;
+}

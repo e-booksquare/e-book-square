@@ -1,0 +1,307 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.obra{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(232, 227, 250);
+}
+
+.container_obra{
+    min-width: 765px;
+    max-width: 765px;
+    background-color: white;
+    margin: 50px 0;
+    display: flex;
+    gap: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: -1px 0px 10px 0px #a49f9f;
+}
+
+.imagem_obra{
+    box-shadow: -1px 0px 10px 0px #a49f9f;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: black;
+    height: 350px;
+    width: 250px;
+}
+
+.font14pt{
+    font-size: 14pt;
+}
+
+.Negrito{
+    font-weight: 600;
+}
+
+.info_obra{
+    max-width: 450px;
+}
+
+.container_editor_texto{
+    margin: 50px 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.editor_texto{
+    box-shadow: -1px 0px 10px 0px #a49f9f;
+}
+
+.titulo_obra{
+    outline: none;
+    border: none;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 30pt;
+}
+
+.Titulo_entrada{
+    display: flex;
+    justify-content: center;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.container_botoes{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botoes button{
+    height: 40px;
+    padding: 0 20px;
+    font-size: 13pt;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: white;
+}
+
+.botoes_salvar_cancelar{
+    display: flex;
+    gap: 20px;
+}
+
+.botoes_salvar_cancelar p{
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.sa{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(4, 187, 4);
+    color: rgb(4, 187, 4);
+}
+
+.sa:hover{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(4, 187, 4);
+    color: white;
+}
+
+
+.cancelar{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid rgb(58, 57, 57);;
+    color: rgb(58, 57, 57);
+}
+
+.cancelar:hover{
+    background-color: rgb(58, 57, 57);;
+    color:white;
+}
+
+.exportar_pdf{
+    margin-top: 20px;
+    width: 100%;
+    border: 2px solid red;
+    color: red;
+    
+}
+
+.exportar_pdf:hover{
+    background-color:red;
+    color: white;
+}
+
+main{
+    min-height: 100%;
+    padding-bottom: 300px;
+}
+
+footer{
+    margin-top: -274px;
+}
+
+.filter{
+    filter: blur(4px);
+}
+
+
+
+
+
+
+.container_obra_filtro{
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 810px;
+    height: 570px;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 2px solid rgb(78, 78, 78);
+    padding: 15px;
+}
+
+.container_obra_header{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.container_obra_header i{
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.container_obra_header span{
+    text-decoration: underline;
+}
+.container_obra_titulo{
+    display: flex;
+    align-items: center;
+}
+.mensagem_autor{
+    margin: 15px 0 0 30px ;
+    font-size: 12pt;
+    color: #505050;
+    position: relative;
+}
+
+.mensagem_autor::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 2px;
+    height: 100%;
+    background-color: #505050;;
+}
+
+.mensagem_autor textarea{
+    font-size: 12pt;
+    color: #505050;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize:none; 
+}
+
+
+.container_obra_info{
+    border-radius: 10px;
+    border: 2px solid rgb(214, 214, 214);
+    padding: 15px;
+    display: flex;
+    margin: 10px 20px;
+    gap: 10px;
+}
+
+.imagem img{
+    border-radius: 10px;
+    width: 170px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.imagem_autor_obra_filtro{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+.titulo_autor_obra_filtro{
+    font-weight: bold;
+}
+
+.container_obra_info{
+    border-radius: 10px;
+    border: 2px solid rgb(214, 214, 214);
+    padding: 15px;
+    display: flex;
+    margin: 10px 20px;
+    gap: 10px;
+}
+
+.categorias_filtros{
+    margin: 10px 0;
+    flex-wrap: wrap;
+    gap: 7px;
+    display: flex;
+}
+
+
+.categorias_filtros::-webkit-scrollbar{
+    height: 10px;
+    background-color: #d8d8d8;
+}
+.categorias_filtros::-webkit-scrollbar-thumb{
+    height: 10px;
+    background-color: rgb(75, 75, 75);
+    border-radius: 10px;
+}
+
+.categorias_filtros span{
+    padding: 7px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.descrição_historia{
+    width: 450px;
+}
+
+.container_obra_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.container_obra_footer p, button{
+    cursor: pointer;
+    font-size: 15pt;
+    padding: 10px;
+    color: white;
+    background-color: rgb(24, 24, 24);
+    border-radius: 10px;
+    border: none;
+}

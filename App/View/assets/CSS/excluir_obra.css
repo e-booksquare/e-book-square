@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    margin: 20px 100px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.texto{
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.opcao_texto{
+    margin: 10px 0;
+}
+
+textarea{
+    width: 50%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    resize: none;
+}
+
+.botao{
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.excluir{
+    background-color: #e95252;
+    color: #fff;
+}
+
+.cancelar{
+    background-color: #5e5e5e;
+    color: #fff;
+}
+
+.excluir:hover{
+    background-color: #d43232;
+}
+
+.cancelar:hover{
+    background-color: #3a3a3a;
+}
+
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.checkbox-group {
+    margin: 10px 10px 10px 50px;
+}
+
+.observacao_texto{
+    font-size: 10pt;
+    font-style: italic;
+    color: #7a7a7a;
+}
+
+.titulo{
+    font-size: 15pt;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+}

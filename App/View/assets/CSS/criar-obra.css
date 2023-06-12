@@ -1,0 +1,279 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+main{
+    padding-top: 70px;
+}
+body{
+    overflow-x: hidden;
+
+}
+.container_adicionar_foto input[type="file"]{
+    display: none;
+}
+
+/* IMG deformada */
+#imgbdtamanho{
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+
+.titulo_tamanho_foto{
+    margin-bottom: 15px;
+}
+.texto_tamanho_foto{
+    margin-bottom: 20px;
+}
+.container_obra{
+    margin-left: 50px;
+    max-width: 300px;
+}
+.selecao_upload{
+    cursor: pointer;
+}
+.foto_obra img{
+    margin-bottom: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+.cabessario_adicionar_historia{
+    border-top: 1px solid black;
+    background-color: white;
+    padding: 0 70px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 60px;
+}
+hr{
+    margin: 5px;
+    margin-bottom: 15px;
+}
+.container_adicionar_foto{
+    display: flex;
+}
+
+.botoes_salvar_cancelar button{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.botoes_salvar_cancelar button:hover{
+    filter: brightness(.9);
+}
+.botoes_salvar_cancelar button[type='submit']{
+    background-color: #d40743;
+    color: white;
+    font-size: 12pt;
+
+}
+
+.cancelar{
+    font-size: 12pt;
+}
+.divisao_foto_form{
+    display: flex;
+}
+
+
+.container_form_sobre_obra{
+    border-radius: 10px;
+    height: 700px;
+    width: 60%;
+    margin-left: 50px;
+    padding: 20px;
+}
+
+.titulo_obra_fazer_obra{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    outline: none;
+    width: 90%;
+    border-radius: 5px;
+    border: none;
+    padding-left: 10px;
+    font-size: 15pt;
+}
+.container_form_sobre_obra input{
+    outline: none;
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 15pt;
+    border: 1px solid black;
+}
+
+.etaria{
+    width: auto;
+    height: 40px;
+    margin-top: 10px;
+}
+.div_selecionar_categoria{
+    margin-right: 20px;
+}
+.sinopse{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    outline: none;
+    width: 90%;
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 10px;
+    font-size: 12pt;
+}
+select{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    outline: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 12pt;
+    border: 1px solid black;
+}
+.conjunto_fazer_obra{
+    display: flex;
+}
+.adicionar_tags{
+    display: flex;
+    align-items: center;
+}
+.adicionar_tags input{
+    margin-right: 10px;
+}
+.adicionar_tags span{
+    background-color: #d40743;
+    color: white;
+    padding: 10px;
+}
+.adicionar_tags span:hover{
+    filter: brightness(0.6);
+}
+.elementos_aqui{
+    display: flex;
+    margin: 5px;
+    flex-wrap: wrap;
+}
+.elementos_aqui p{
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.botao_comecar_escrever{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.comecar_escrever{
+    padding: 10px;
+    background-color: #d40743;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: -20px 0 20px;
+}
+
+.comecar_escrever:hover{
+    filter: brightness(0.6);
+}
+
+.botao_adicionar{
+    height: 40px;
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #d40743;
+    border: none;
+    margin-left: 10px;
+    color: white;
+    font-size: 12pt;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.botao_adicionar:hover{
+    filter: brightness(0.6);
+}
+.selecionar_categoria{
+    display: flex;
+}
+
+.categoria{
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.categoria::after{
+    content: "X";
+    font-family: sans-serif;
+    font-weight: 900;
+    color: #d40743;
+    border-radius: 5px;
+    position: absolute;
+    right: -5px;
+    top: -10px;
+}
+
+.img_selecionada{
+    object-fit: cover;
+}
+
+.imagem_da_obra{
+    position: relative;
+    height: 450px;
+    width: 270px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: rgb(236, 236, 236);
+    cursor: pointer;
+}
+
+
+.foto_obra{
+    object-fit: cover;
+    border-radius: 10px;
+    height: 450px;
+    width: 270px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.sem_imagem{
+    position: relative;
+    width: 100%;
+    height: 94%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+#sem_imagem_text{
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    margin-top: 140px;
+}

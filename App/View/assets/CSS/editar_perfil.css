@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+body{
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+.banner_editar{
+    filter: brightness(.6);
+    display: flex; 
+    justify-content: center; 
+    width: 100vw;
+    height: 400px; 
+    border: 2px solid black; 
+    position: relative;
+}
+
+.editar_img{
+    object-fit: cover;
+}
+
+.lixeira_banner{
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.img_perfil{
+    position: relative;
+}
+
+.lixeira{
+    position: absolute;
+    margin: auto;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 35px;
+    width: 35px;
+}
+
+.container_trocar_imagens{
+    margin-top: 10px;
+    width: 100vw;
+    display: flex;
+    justify-content: right;
+}
+.container_trocar_imagens label:hover{
+    filter: brightness(.8);
+}
+
+.Botao_trocar_banner{
+    background-color: #00C2FF;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+}
+.Botao_trocar_perfil{
+    margin: 5px;
+    background-color: #00C2FF;
+    padding: 10px;
+    margin-right: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.imagem_perfil_editar{
+    z-index: 1;
+    display: flex; 
+    height: 300px;
+    width: 300px;
+    border: 2px solid black; 
+    border-radius: 100%; 
+    margin: 0 auto; 
+    position: absolute;
+    bottom: -150px;
+    overflow: hidden;
+}
+
+.container_informacoes_usuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px;
+}
+    
+form{
+    width: 100%;
+}
+
+.trocar_informacoes{
+    padding: 10px;
+    font-size: 13pt;
+    width: 350px;
+}
+
+.Titulo_trocar_descricao{
+    margin: 0px 0 30px;
+    font-size: 20pt;
+    font-weight: 600;
+}
+#descricao{
+    width: 500px;
+    height: 240px;
+    padding: 10px;
+    font-size: 13pt;
+}
+.titulo_contato{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+.containers_contatos{
+    display: flex;
+    margin-top: 5px;
+}
+.containers_contatos img{
+    width: 47px;
+    height: 47px;
+    margin-right: 10px;
+}
+
+.salvar_voltar{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.salvar{
+    padding: 10px 20px;
+    margin: 5px;
+    color: white;
+    background-color: rgb(5, 180, 5);
+    font-size: 12pt;
+    border: none;
+}
+.voltar{
+    font-size: 12pt;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: rgb(94, 94, 94);
+    text-align: center;
+}
+
+.editar_error{
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 3px 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 20px;
+    font-size: 12px;
+}
+
+.limitador{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.limit{
+    border: 1px solid #ff2851;
+    outline-style: none;
+}
+
+.limit:focus{
+    border: 1px solid #ff2851;
+}
+
+.limit_text{
+    color: #ff2851 ;
+}
+
+.input_doacoes{
+
+    padding-left: 10px;
+    padding-right: 25px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+.codigo_discord::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+.codigo_discord{ 
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+   -moz-appearance: textfield;
+   appearance: textfield;
+    width: 60px;
+    padding: 10px;
+}

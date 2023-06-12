@@ -1,0 +1,236 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+main{
+    margin: 50px;
+}
+.titulo_capitulos{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    justify-content: center;
+}
+
+.titulo{
+    font-size: 12pt;
+    font-weight: 100;
+}
+.autor{
+    align-items: center;
+    display: flex;
+    gap: 50px
+}
+
+.nome_autor_denuncia{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add_favo_denun{
+    gap: 15px;
+    height: 40px;
+    width: auto;
+    margin-left: 0;
+    /* border-radius: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.bi-exclamation-triangle{
+    color: rgb(255, 0, 0);
+}
+.bi-bookmark-star{
+    color: goldenrod;
+}
+.bi-person-plus{
+    color: black;
+}
+.icon{
+    font-size: 18pt;
+}
+
+.selecionar_capitulo{
+    padding: 10px;
+    width: 200px;
+}
+
+.Capitulo{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    word-break: break-word;
+}
+
+.imagem_historia{
+    height: 300px;
+    width: 210px;
+    margin-bottom: 20px;
+}
+
+.imagem{
+    display: flex;
+    justify-content: center;
+}
+
+.leitura{
+    text-align: justify;
+    padding: 10px;
+    
+}
+
+
+
+.comentarios{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.data_denunciar{
+    display: flex;
+    justify-content:space-between;
+}
+
+.icon_nome{
+    gap: 10px;
+    display: flex;
+}
+
+.comentario_texto{
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.pular_cap_Mais_historias{
+    display: flex;
+    justify-content: center;
+}
+
+.pular{
+    height: 50px;
+    padding: 0 15px;
+    justify-content: center;
+    margin: 30px 0;
+    display: flex;
+    text-align: center;
+    gap: 100px;
+}
+
+.cap{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.linha{
+    background-color: black;
+    height: auto;
+    width: 1px;
+}
+.container_comentario{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 10px;
+}
+
+.comentarios{
+    margin-top: 50px;
+}
+.comentario_texto textarea{
+    background-color: #dad9d9;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    font-size: 12pt;
+    border: none;
+}
+.comentario_texto button{
+    margin-top: 5px;
+    float: right;
+    height: 35px;
+    padding: 0 10px;
+    font-size: 13pt;
+    border: 1px solid #D4415B;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.idade_14{
+    height: 48px; width: 48px;
+}
+
+.container_idade_opcoes{
+    display: flex;
+    gap: 15px;
+}
+
+
+
+.bi-exclamation-triangle:hover{
+    color: rgb(255, 0, 0);
+}
+.bi-bookmark-star:hover{
+    color: goldenrod;
+}
+.bi-person-plus:hover{
+    color: blue;
+}
+.icon{
+    color: black;
+    height: 25px;
+    width: 28px;
+    cursor: pointer;
+}
+
+.botoes_finais{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.botoes_final{
+    padding: 10px;
+    font-size: 12pt;
+    cursor: pointer;
+    background-color: #d40743;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.userObra{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.userOwn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo_cap{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20pt;
+    padding-top: 20px;
+}
