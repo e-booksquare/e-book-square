@@ -79,7 +79,7 @@
                             <nav>
                             <?php foreach($categorias as $indice => $categoria){ 
                                 $nomeCat = $categoria['categoriaCat'];
-                                    echo "<a href='#'><li class='opcoes_dropdown'>$nomeCat</li></a>";
+                                    echo "<li class='opcoes_dropdown'>$nomeCat</li>";
                                     if($indice == 30)
                                     { echo "<a href='#'><li style='color: #d40743;' class='opcoes_dropdown'>+ Mais</li></a>"; break;}
                                 }

@@ -30,6 +30,15 @@ $(document).ready(function (){
             }
         });
 
+        $(".opcoes_dropdown").on("click", function() {
+            const categoria = $(this).html()
+            if (categoria != '+ Mais') {
+                window.location.href = `http://localhost/e-book-square/App/View/pages/pesquisa.php?search=${categoria}`;
+            }
+
+              return;
+        })
+
 
 
     

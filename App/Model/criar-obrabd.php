@@ -13,6 +13,11 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['ID_user']) &&
 isset($_POST['atualizar']) || isset($_POST['submit'])) 
 {
 
+    if($_POST['titulo_obra_fazer_obra'] == null){
+        $_SESSION['msg-criar-obra'] = "Titulo da obra não"; 
+        header("location: ../View/pages/editar-perfil.php");
+        die();
+    }
     
     $titulo_obra = filter_input(INPUT_POST,'titulo_obra_fazer_obra', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $descr_obra = filter_input(INPUT_POST,'sinopse_fazer_obra', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -68,8 +73,7 @@ isset($_POST['atualizar']) || isset($_POST['submit']))
             }
     
         } else {
-          echo "nivel 2 parou";
-          //   header("location: fazer_obra.php");
+            header("location: ../View/pages/capa_da_obra.php?obra=".$_POST['idobra']);
             exit();
         }
     }
@@ -86,8 +90,7 @@ isset($_POST['atualizar']) || isset($_POST['submit']))
     }
 
 } else {
-   echo "nivel 1 parou";
-   //  header("location: pre_criacao.php");
+    header("location: ../View/pages/capa_da_obra.php?obra=".$_POST['idobra']);
     exit();
 }
 

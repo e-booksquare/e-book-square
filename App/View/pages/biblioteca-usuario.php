@@ -154,10 +154,10 @@
                 <li><a class="itens_drop" href="criar-obra.php?obra=<?=$value['ID_obra']; ?>">Editar</a></li>
 
 
-                <li><a class="excluir itens_drop" href="../../Model/delete-obrabd.php?obra=<?= $value['ID_obra']; ?>">Excluir</a></li>
-
-                <!-- <li><a style="text-decoration:none; padding:5px 10px;" class="excluir" href="../../Model/delete-obrabd.php?obra=<?= $value['ID_obra']; ?>">Excluir</a></li> -->
-                
+                <li>
+                    <p class="excluir itens_drop" 
+                    onclick="AbriExcluir(<?= $value['ID_obra']; ?>, '<?= $value['nome_obra']; ?>')">Excluir</p></li>
+          
             </ul>
         </li>
     </ul>
@@ -248,9 +248,9 @@
     <div class="modal_excluir">
         <p style="font-size: 15pt">Deseja excluir essa obra?</p>
         <p style="font-size: 12pt; font-style: italic;">Depois de excluido não sera possivel recuperar</p>
-        <p style="padding-top: 5px"><span style="font-weight: bold;">Titulo: </span><span> <?= $value['nome_obra']; ?></span></p>
+        <p style="padding-top: 5px"><span style="font-weight: bold;">Titulo: </span><span id="nomeObraModal"></span></p>
         <div class="container_botoes_excluir">
-            <a class="botao_container_excluir excluir_modal" href="../../Model/delete-obrabd.php?obra=<?= $value['ID_obra']; ?>">Excluir</a>
+            <a class="botao_container_excluir excluir_modal">Excluir</a>
             <p class="botao_container_excluir cancelar" onclick="cancelar()">Cancelar</p>
         </div>
     </div> 
@@ -270,13 +270,16 @@ function abaObras(){
         document.querySelector("#favoritos").style.display="block";
         document.querySelector("#obras").style.display="none";
     }
-    function AbriExcluir(){
+    function AbriExcluir(id, nome){
         var modal_excluir= document.querySelector(".modal_excluir");
         modal_excluir.style.display="block";
         const scrollY = window. pageYOffset + 150;
         modal_excluir.style.marginTop= scrollY + "px";
         document.querySelector("#topo").classList.add("travar");
         document.querySelector("#main").classList.add("filtro");
+        let url = `../../Model/delete-obrabd.php?obra=${id}`;
+        document.querySelector("#nomeObraModal").textContent = nome;
+        document.querySelector(".excluir_modal").setAttribute("href", url);
     }
     function cancelar(){
         var modal_excluir= document.querySelector(".modal_excluir");

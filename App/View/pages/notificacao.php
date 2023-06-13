@@ -67,7 +67,7 @@ $activeNotAtdp = $classLog->find(["NOTatdp"], "usuario", [" WHERE ID_user = " . 
     </main>
 
 
-
+    <script src="../assets/JAVASCRIPT/header.js"></script>
     <?php include_once 'footer.php'; ?>
 </body>
 
