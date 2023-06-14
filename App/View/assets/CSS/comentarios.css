@@ -1,3 +1,4 @@
+@import "config.css";
 .comentario{
     margin: 50px 50px;
 }
@@ -54,7 +55,7 @@
     border-radius: 4px;
     font-size: 18px;
     color: white;
-    background-color: #FF002E;
+    background-color: var(--roxa);
     width: 100px;
     border: none;
     height: 35px;

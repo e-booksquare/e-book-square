@@ -1,3 +1,4 @@
+@import "config.css";
 * {
   padding: 0;
   margin: 0;
@@ -291,14 +292,14 @@ main {
   height: 35px;
   padding: 0 10px;
   font-size: 13pt;
-  border: 1px solid #d4415b;
+  border: 1px solid var(--roxa);
   border-radius: 5px;
   background-color: white;
   cursor: pointer;
 }
 .comentario_texto button:hover {
   color: white;
-  background-color: #d4415b;
+  background-color: var(--roxa-hover);
 }
 
 .comentarios {
@@ -391,7 +392,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #d40743;
+  background-color: var(--roxa);
   border-radius: 10px;
   color: white;
   cursor: pointer;
@@ -542,7 +543,7 @@ main {
 }
 .add_novo_cap a {
   border-radius: 10px;
-  background-color: #d40743;
+  background-color: var(--roxa);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -553,7 +554,7 @@ main {
 }
 
 .add_novo_cap a:hover {
-  background-color: #eb2560;
+  background-color: var(--roxa-hover);
   cursor: pointer;
 }
 

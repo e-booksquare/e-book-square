@@ -182,7 +182,7 @@ select{
 }
 .comecar_escrever{
     padding: 10px;
-    background-color: #d40743;
+    background-color: var(--roxa);
     color: white;
     border: none;
     border-radius: 5px;
@@ -190,7 +190,7 @@ select{
 }
 
 .comecar_escrever:hover{
-    filter: brightness(0.6);
+    background-color: var(--roxa-hover);
 }
 
 .botao_adicionar{
@@ -198,7 +198,7 @@ select{
     padding: 10px;
     width: 100px;
     border-radius: 5px;
-    background-color: #d40743;
+    background-color: var(--roxa);
     border: none;
     margin-left: 10px;
     color: white;
@@ -208,7 +208,7 @@ select{
     margin-top: 10px;
 }
 .botao_adicionar:hover{
-    filter: brightness(0.6);
+    background-color: var(--roxa-hover);
 }
 .selecionar_categoria{
     display: flex;

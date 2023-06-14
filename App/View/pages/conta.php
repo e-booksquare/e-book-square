@@ -78,10 +78,10 @@ include_once '../../Model/verificacao.php';
         document.querySelector("#main").classList.add("filtro");
     }
     function CancelarModalExcluir(){
+        document.querySelector("#ModalExcluir").style.display = "none";
         document.querySelector("#header").classList.remove("filtro");
         document.querySelector("#footer").classList.remove("filtro");
         document.querySelector("#main").classList.remove("filtro");
-        document.querySelector("#ModalExcluir").style.display = "none";
     }
 </script>
 </html>

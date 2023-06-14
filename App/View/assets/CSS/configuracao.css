@@ -1,3 +1,4 @@
+@import "config.css";
 
 *{
     padding: 0;
@@ -31,7 +32,7 @@ main{
 .opcao{
     list-style: none;
     cursor: pointer;
-    color: #E2033880;
+    color: var(--roxa-op);
     padding: 10px;
     border-radius: 10px;
     font-weight: 600;
@@ -39,7 +40,7 @@ main{
 }
 .selecionado{
     color: white;
-    background-color: #E20338;
+    background-color: var(--roxa);
 }
 
 .config{

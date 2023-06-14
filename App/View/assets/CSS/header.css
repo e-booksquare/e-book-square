@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap');
-
+@import "config.css";
 * {
     padding: 0;
     margin: 0;
@@ -171,14 +171,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #d40743;
+  background-color:  var(--roxa);
   color: white !important;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .type-new-history:hover {
-  background-color: #a10634;
+  background-color: var(--roxa-hover);;
 }
 
 .editar_img{

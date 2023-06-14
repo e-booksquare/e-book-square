@@ -1,6 +1,7 @@
+@import "config.css";
 .container_icon{
     border-radius: 100%;
-    background-color: #E20338;
+    background-color: var(--roxa);
     position: absolute;
     right: -30px;
     margin: auto;

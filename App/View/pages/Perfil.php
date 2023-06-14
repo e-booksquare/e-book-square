@@ -193,7 +193,7 @@
                             </p>
                             <div id="div-desc"></div>
                             <p style="font-size: 14px; margin: 10px 0px 0px; text-align: center; ">Se juntou em: <span
-                                    style="font-style: italic; color: #d40743 ">
+                                    style="font-style: italic; color: #800080 ">
                                     <?= $dadosUserPerfil['data_cad']; ?>
                                 </span></p>
                         </div>

@@ -1,3 +1,4 @@
+@import "config.css";
 * {
     padding: 0;
     margin: 0;
@@ -26,7 +27,7 @@ margin-top: -274px;
 }
 
 .titulo {
-    color: #FF4242;
+    color: var(--roxa);
     font-size: 40px;
     margin-bottom: 28px;
 }
@@ -66,7 +67,7 @@ margin-top: -274px;
 
 .enviar {
     padding: 10px;
-    background-color: #FF4242;
+    background-color: var(--roxa);
     color: white;
     width: 100%;
     border: none;
