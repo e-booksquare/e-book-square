@@ -605,6 +605,15 @@ class log
         return true;
     }
 
+    public function obraImgGenerator() {
+        $defaultNumber = rand(1,12);
+        $nameIMG = "default";
+        $fileExtension = ".jpeg";
+        $imgObra = $dirIMG.$defaultNumber.$fileExtension;
+
+        return $imgObra;
+    }
+
     function cad_cod($nome)
     {
 

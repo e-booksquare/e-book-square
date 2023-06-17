@@ -9,6 +9,7 @@ include_once '../../Model/verificacao.php';
     <link rel="stylesheet" href="../assets/CSS/header.css">
     <link rel="stylesheet" href="../assets/CSS/footer.css">
     <link rel="stylesheet" href="../assets/CSS/excluir_obra.css">
+    <link rel="shortcut icon" href="../assets/IMAGENS/logo-removebg-preview.png" type="image/x-icon">
 </head>
 <body>
     <?php
@@ -23,17 +24,17 @@ include_once '../../Model/verificacao.php';
 
 
             <div class="opcao">
-                <input class="opcao_texto" type="checkbox" id="option2" name="option2">
+                <input class="opcao_texto" type="radio" id="option2" name="option">
                 <label class="opcao_texto" for="option2">Eu publiquei a história por engano</label>
             </div>
 
             <div class="opcao">
-                <input class="opcao_texto" type="checkbox" id="option3" name="option3">
+                <input class="opcao_texto"  type="radio" id="option3" name="option">
                 <label class="opcao_texto" for="option3">Eu quero reescrever a história</label>
             </div>
             
             <div class="opcao">
-                <input class="opcao_texto" type="checkbox" id="option4" name="option4">
+                <input class="opcao_texto" type="radio" id="option4" name="option">
                 <label class="opcao_texto" for="option4">Outro motivo</label>
             </div>
 		</div>

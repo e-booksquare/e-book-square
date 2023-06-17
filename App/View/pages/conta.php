@@ -24,16 +24,11 @@ include_once '../../Model/verificacao.php';
             <nav class="navegacao">
                 <ul>
                     <a href="conta.php"><li class="opcao selecionado">Conta</li></a>
-                    <a href="notificacao.php"><li class="opcao ">Notificações</li></a>
-                    <a href="bloqueios.php"><li class="opcao">Lista de bloqueados</li></a>
                 </ul>
             </nav>
 
             <section class="config">
             <form action="" method="post">
-                <div class="container_icon">
-                    <a href="notificacao.php"><img class="icone_not" src="../assets/IMAGENS/Imgem_notificacao.svg"></a>
-                </div>
                 <div class="informacoes">
                     <p><span class="texto_topicos">Nome de usuário: </span><input type="text" name="nome_usuario" id="nome_usuario" value="<?= $dados_usuario['nome'];?>"></p>
                     <p><span class="texto_topicos">Chave pix: </span><input type="text" name="chave_pix" id="chave_pix" value="<?= $dados_usuario['chavePix'];?>"></p>

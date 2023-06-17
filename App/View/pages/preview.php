@@ -89,7 +89,7 @@ if ($_GET['obra']) {
                     }
 
                     function redirect(capNumberJS) {
-                        window.location.href = `http://localhost/e_book_square/App/View/pages/preview.php?obra=<?= $idObra; ?>&cap=${capNumberJS}`;
+                        window.location.href = `http://localhost/e-book-square/App/View/pages/preview.php?obra=<?= $idObra; ?>&cap=${capNumberJS}`;
                     }
                 </script>
                 <div class="container_idade_opcoes">
@@ -102,9 +102,6 @@ if ($_GET['obra']) {
                             (
                             <?= $views; ?>)
                         </div>
-                        <a href="#">
-                            <i class="bi bi-exclamation-triangle icon"></i>
-                        </a>
                     </div>
                 </div>
         </section>
@@ -154,10 +151,7 @@ if ($_GET['obra']) {
                             <?= $dados_usuario['nome']; ?>
                         </span>
                     </div>
-                    <div>
-                        <span>Contém spoiler</span>
-                        <input type="checkbox" id="chk_spoiler_mega">
-                    </div>
+                   
                 </div>
                 <div class="escrever_comentario">
                     <textarea placeholder="Escreva algo sobre o capítulo..." a id="conteudoComentario" cols="30"

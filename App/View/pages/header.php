@@ -65,29 +65,7 @@
                 <a href="feed.php"><img src="../assets/IMAGENS/logo.jpg" alt="" class="logo-header"></a>
             </div>
             <ul class="dropdown">
-                <li style="display: flex; align-items: center; gap: 30px; margin-left:20px ;">
-                    <div class="explorar">
-                        <label class="label_explorar" for="explorar" onclick="clique_explorar()"> Explorar <svg
-                                id="dropdown_explorar_girar" class="icon_seta_para_baixo"
-                                xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                            </svg> </label>
-                        <input class="checkbox_explorar" id="explorar" type="checkbox" name="" id="">
-                        <div class="nada" id="dropdown_explorar">
-                            <nav>
-                            <?php foreach($categorias as $indice => $categoria){ 
-                                $nomeCat = $categoria['categoriaCat'];
-                                    echo "<li class='opcoes_dropdown'>$nomeCat</li>";
-                                    if($indice == 30)
-                                    { echo "<a href='#'><li style='color: #d40743;' class='opcoes_dropdown'>+ Mais</li></a>"; break;}
-                                }
-                                ?>
-                            </nav>
-                        </div>
-                    </div>
-                </li>
+            
 
             <li  class="pesquisa_li" style="margin-left:-20px ; ">
                 <input  on="pesquisa_selecionada()" id="pesquisa" class="pesquisa" type="search" placeholder="Pesquise livros e artista aqui">
@@ -100,47 +78,7 @@
             </li>
             <?php if(isset($_SESSION['ID_user']) && !empty($_SESSION['ID_user'])){ ?>
 
-            <li class="notificacoes">
-                <i class="bi bi-bell-fill" onclick="abrir_notificacao()" id="iconNot"></i>
-
-<!--  numberNot  -->
-                <div class='numeros_notificacoes' id="numberNot" onclick='abrir_notificacao()' style='cursor: pointer;'></div>
-                <div class="container_notificacao">
-                    <nav class="nav_notificacao">
-                        <ul>
-                            <li id="minha_conta" class="itens selecionado" onclick="minha_conta()">Minha conta</li>
-                            <li class="divisao"></li>
-                            <li id="minha_historia" class="itens" onclick="minha_historia()">Minhas Historias</li>
-                        </ul>
-                    </nav>
-                    <div class="container_marcar_todos_excluir">
-                        <div class="marcar_todos">
-                            <input id="checkAll" onclick="checar_todas()" type="checkbox"><span><label for="checkAll" onclick="checar_todas()"> Marcar todos os itens<label></span>
-                        </div>
-                        <div class="excluir_not" onclick="excluir_not()">
-                            <i class="bi bi-trash" ></i><span>Excluir notificações</span>
-                        </div>
-                        
-                    </div>
-
-                        <div style="display: flex; justify-content: center;">
-                            <!-- <button class="excluir_not_button" type="submit">Excluir os itens selecionados</button> -->
-                        </div>
-                    <div id="container_minha_conta" class="minha_conta">
-
-                        <table id="minha_conta_not"></table>
-
-                    </div>
-                    <div id="container_minha_historia"  class="minha_historia">
-
-                        <table id="minha_historia_not"></table>
-
-                        <div style="display: flex; justify-content: center;">
-                            <button class="excluir_not_button" id="exc">Excluir os itens selecionados</button>
-                        </div>
-                    </div>
-                </div>
-            </li>
+        
             <?php }?>
             
 

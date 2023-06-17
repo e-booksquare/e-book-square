@@ -75,14 +75,10 @@ function cmtContentComp($IDUser, $nomeUser, $codigoUser, $fotoUser, $content, $d
                         </div>
                         <div>
                             <span>$dataComPassados</span>
-                            <span><i class='bi bi-three-dots-vertical'></i></span>
                         </div>
                     </div>
                     <div class='texto_publicado'>
                         <span class='texto'>$content</span>
-                    </div>
-                    <div class='responder' data-code='$codigoUser'>
-                        <p id='resp'>Responder</p>
                     </div>
                 </div>";
     return $result;
@@ -99,15 +95,15 @@ function cmtTextareaComp($nomeUser, $fotoUser, $IDCmt){
                             </span>
                         </div>
                         <div>
-                            <span>Contém spoiler</span>
-                            <input type='checkbox' id='chk_spoiler'>
+                            
+                         
                         </div>
                     </div>
                     <div class='escrever_comentario'>
                         <textarea name='' id='conteudoResp' cols='30' rows='4'></textarea>
                     </div>
                     <div class='enviar'>
-                        <button type='submit' class='enviarCom' id='enviarCom' data-idtipo='$IDCmt' data-tipo='$tipo'>Enviar</button>
+                        <button type='submit' class='enviarCom' id='enviarCom' data-idtipo='$IDCmt' data-tipo='$tipo'>Responder</button>
                     </div>
                 </div>
             </div>";
@@ -136,14 +132,10 @@ function subCmtComp($IDUser, $nomeUser, $codigoUser, $fotoUser, $contentSubCom, 
                         </div>
                         <div>
                             <span>$dataComPassados</span>
-                            <span><i class='bi bi-three-dots-vertical'></i></span>
                         </div>
                     </div>
                     <div id='texto1' class='texto_publicado $classSpoiler'>
                         <span class='texto'>$contentSubCom</span>
-                    </div>
-                    <div class='responder' data-code='$codigoUser'>
-                        <p>Responder</p>
                     </div>
                 </div>";
 

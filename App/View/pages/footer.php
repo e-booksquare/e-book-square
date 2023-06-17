@@ -12,10 +12,6 @@
       <li class="formatacao link_footer">
         <a href="sobre-nos.php">Sobres nós</a>
       </li>
-
-      <li class="formatacao link_footer">
-        <a href="contato.php">Suporte</a>
-      </li>
     </ul>
   </div>
   <div class="footer_terceira_parte">

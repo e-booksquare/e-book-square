@@ -197,36 +197,7 @@
                                     <?= $dadosUserPerfil['data_cad']; ?>
                                 </span></p>
                         </div>
-                    </div>
-
-                    <div class="Container">
-                        <div class="container_geral_esquerdo">
-                            <p class="titulo_container">Nivel</p>
-                            <div class="container_nivel">
-                                <div class="container_barra_progresso">
-                                    <span class="nivel"><?=$RankUser['levelRAN'];?></span>
-                                    <progress clas4s="progresso" value="<?=$RankUser['expRAN'];?>" max="<?=$RankUser['maxExpRAN'];?>"></progress>
-                                </div>
-                                <div class="valor_exp">
-                                    <p><span><?=$RankUser['expRAN'];?></span>/<span><?=$RankUser['maxExpRAN'];?>EXP</span></p>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="Container">
-                        <div class="container_geral_esquerdo">
-                            <p class="titulo_container">Compartilhe o perfil</p>
-                            <div class="container_compartilhamento">
-                                <a href="#"><i class="bi bi-facebook icons"></i></a>
-                                <a href="#"><i class="bi bi-discord icons"></i></a>
-                                <a href="#"><i class="bi bi-whatsapp icons"></i></a>
-                                <a href="#"><i class="bi bi-twitter icons"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    </div>               
 
                     <div class="Container">
                         <div class="container_geral_esquerdo">
@@ -267,10 +238,6 @@
                             <li class="titulo_obras" id="Titulo_Obra" onclick="trocarAba('Obras')">Obras</li>
                             <li class="titulo_desativado" id="Titulo_Publico" onclick="trocarAba('Publico')">Publico
                             </li>
-                            <li class="titulo_desativado" id="Titulo_Conversas" onclick="trocarAba('Conversas')">
-                                Comunidade</li>
-                            <li class="titulo_desativado" id="Titulo_Conquistas" onclick="trocarAba('Conquistas')">
-                                Conquistas</li>
                         </ul>
                     </div>
 
@@ -363,43 +330,7 @@
                     $Ultimas4ObrasLidas = $classLog->lendoObrasPerfil();
                 ?>
 
-            <section class="lendo">
-                <p class="titulo_lendo">Lendo</p>
-                <div class="aling_obras">
-            <?php  if(! empty($Ultimas4ObrasLidas)){
-                        
-                foreach ($Ultimas4ObrasLidas as $indice => $IdObraLendo){
-                            
-                    $ObraLendoUserPerfil = 
-                    $classLog->find(['*'], 'obra', ["WHERE ID_obra = ".$IdObraLendo]);
-                    $UserObraLendo = $classLog->findUser([" ID_user = ".$ObraLendoUserPerfil['user_FK']]);
-            ?>
-                <div class="container_obra_lendo" style="position: relative;">
-                <div class="favo_lendo">
-                        <div class="Lendobox obraPerfilLendobox" id="obraLendobox<?=$indice;?>" data-id="<?= $ObraLendoUserPerfil['ID_obra']; ?>" ></div>
-                    </div>
-                    <a href="capa_da_obra.php?obra=<?=$ObraLendoUserPerfil['ID_obra']; ?>">
-                        <div class="img_obra_lendo">
-                            <img class="img_obra_lendo"
-                                src="
-                        <?php if (isset($ObraLendoUserPerfil['foto_obra']) && !empty($ObraLendoUserPerfil['foto_obra'])) { ?>
-                                        ../assets/IMAGEM_USUARIO/<?= $ObraLendoUserPerfil['foto_obra']; ?>
-                                    <?php } else { ?>
-                                    ../assets/IMAGENS/sem imagem.gif
-                                    <?php } ?>
-                                " alt="">
-                        </div>
-                        <p class="titulo_obra_lendo"><?=$ObraLendoUserPerfil['nome_obra'];?></p>
-                    </a>
-                </div>
-                    <?php  } 
-                        } else { 
-                        if($_SESSION['ID_user'] != $dadosUserPerfil['ID_user'])
-                        {echo $dadosUserPerfil['nome']." ainda não leu nenhuma obra";} 
-                        else{echo "Você ainda não leu nenhuma obra";}}
-                    ?>   
-                </div>
-            </section>
+        
                 <br><br>
                 <section class="lendo">
                     <p class="titulo_lendo">Favoritos</p>
@@ -448,29 +379,7 @@
                         </div>
                         <?php }?>
                     </div>
-                    <div id="Conversas">
-                        <section class="comentario">
-                            <div class="container_escrever_comentario">
-                                <div class="imagem_nome_span">
-                                    <div>
-                                        <img class="ImagemUser_escrever_comentario" src="https://t.ctcdn.com.br/5XPASDBUosgmBv5Ptpxcd6eTJso=/512x288/smart/filters:format(webp)/i257652.jpeg" alt="">
-                                        <span class="NomeUser_escrever_comentario">Nome user</span>
-                                    </div>
-                                    <div>
-                                        <span>Contém spoiler</span>
-                                        <input type="checkbox" name="" id="">
-                                    </div>
-                                </div>
-                                <div class="escrever_comentario">
-                                    <textarea name="" id="" cols="30" rows="4"></textarea>
-                                </div>
-                                <div class="enviar">
-                                    <button type="submit">Enviar</button>
-                                </div>
-                            </div>
-
-                        </section>
-                    </div>
+                    
                 <div id="Publico">
                     <div class="header_publico">
                         <nav class="navegacao_publico">
@@ -599,156 +508,7 @@
                             <!-- Termina aqui -->
                     </div>
                 </div>
-                <div id="Conquistas">
-                    <div class="Container_conquista Check">
-                        <div class="header_conquista">
-                            <p class="text_conquista">Check semanal</p>
-                            <p class="text_conquista">Checking: <span>4</span></p>
-                            <p class="text_conquista">4/7 bonus 20xp</p>
-                        </div>
-                        <div class="dias_check">
-                            <div class="container_check">
-                                <p class="data_check">DOM</p><br>
-                                <p class="xp_check">10xp</p><br>
-                                <p class="texto_check">Check</p>
-                            </div>
-                            <div class="container_check">
-                                <p class="data_check">SEG</p><br>
-                                <p class="xp_check">10xp</p><br>
-                                <p class="texto_check">Check</p>
-                            </div>
-                            <div class="container_check NaoChecada">
-                                <p class="data_check">TER</p><br>
-                                <p class="xp_check">10xp</p><br>
-                                <p class="texto_check">Check</p>
-                            </div>
-                            <div class="container_check">
-                                <p class="data_check">QUA</p><br>
-                                <p class="xp_check">10xp</p><br>
-                                <p class="texto_check">Check</p>
-                            </div>
-                            <div class="container_check">
-                                <p class="data_check">QUI</p><br>
-                                <p class="xp_check">10xp</p><br>
-                                <p class="texto_check">Check</p>
-                            </div>
-                            <div class="container_check checado">
-                                <p class="data_check">SEX</p><br>
-                                <p class="xp_check">10xp</p><br>
-                                <p class="texto_check">Check</p>
-                            </div>
-                            <div class="container_check NaoChecada">
-                                <p class="data_check">SÁB</p><br>
-                                <p class="xp_check">10xp</p><br>
-                                <p class="texto_check">Check</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="Container_conquista Missoes">
-                        <div class="MissoesDiarias">
-                            <p class="text_conquista">Missões diarias</p>
-                            <hr>
-                            <div class="lista_missoes">
-                                <div class="container_missoes">
-                                    <p class="titulo_conquista">Avaliação</p>
-                                    <img class="icon_conquista" src="../assets/IMAGENS/conquista_avaliacao.png" alt="">
-                                    <p>0/1</p>
-                                </div>
-                                <div class="container_missoes">
-                                    <p class="titulo_conquista">Leitura</p>
-                                    <img class="icon_conquista" src="../assets/IMAGENS/conquista_leitura.png" alt="">
-                                    <p>0/1</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="MissoesPrincipais">
-                            <p class="text_conquista">Missões</p>
-                            <hr>
-                            <br>
-                            <article>
-                                Conclua as missões e ganhe pontos de experiência e de ranking. Algumas missões possuem outros graus de níveis de dificuldades a serem concluídos e que serão liberados após a conclusão da missão. Saiba mais sobre as missões clicando aqui.
-                            </article>
-
-                            <div class="lista_missoes">
-                                <div class="container_missoes">
-                                    <p class="titulo_conquista">Avaliação</p>
-                                    <img class="icon_conquista" src="../assets/IMAGENS/conquista_avaliacao.png" alt="">
-                                    <p>4/10</p>
-                                </div>
-                                <div class="container_missoes">
-                                    <p class="titulo_conquista">Leitura</p>
-                                    <img class="icon_conquista" src="../assets/IMAGENS/conquista_leitura.png" alt="">
-                                    <p>18/40</p>
-                                </div>
-                                <div class="container_missoes">
-                                    <p class="titulo_conquista">Amei</p>
-                                    <img class="icon_conquista" src="../assets/IMAGENS/conquista_amei.png" alt="">
-                                    <p>0/1</p>
-                                </div>
-
-                                <div class="container_missoes">
-                                    <p class="titulo_conquista">Escreva</p>
-                                    <img class="icon_conquista" src="../assets/IMAGENS/conquista_escreva.png" alt="">
-                                    <p>0/1</p>
-                                </div>
-
-                                <div class="container_missoes">
-                                    <p class="titulo_conquista">Nivel</p>
-                                    <img class="icon_conquista" src="../assets/IMAGENS/conquista_nivel.png" alt="">
-                                    <p>0/5</p>
-                                </div>
-
-                                <div class="container_missoes">
-                                    <p class="titulo_conquista">Favoritar</p>
-                                    <img class="icon_conquista" src="../assets/IMAGENS/conquista_seguir.png" alt="">
-                                    <p>0/1</p>
-                                </div>
-
-                                <div class="container_missoes">
-                                    <p class="titulo_conquista">Seguir</p>
-                                    <img class="icon_conquista" src="../assets/IMAGENS/conquista_favoritar.png" alt="">
-                                    <p>0/1</p>
-                                </div>
-
-                                <div class="container_missoes">
-                                    <p class="titulo_conquista">Missões</p>
-                                    <img class="icon_conquista" src="../assets/IMAGENS/conquista_missoes.png" alt="">
-                                    <p>0/10</p>
-                                </div>
-                            </div>
-
-                            <div class="MissoesCompleta">
-                                <p class="text_conquista">Missões Completas</p>
-                                <hr>
-
-                                <div class="lista_missoes">
-                                    <div class="container_missoes">
-                                        <p class="titulo_conquista">Avaliação</p>
-                                        <img class="icon_conquista" src="../assets/IMAGENS/conquista_avaliacao.png" alt="">
-                                        <p class="concluido">10/10</p>
-                                    </div>
-                                    <div class="container_missoes">
-                                        <p class="titulo_conquista">Leitura</p>
-                                        <img class="icon_conquista" src="../assets/IMAGENS/conquista_leitura.png" alt="">
-                                        <p class="concluido">40/40</p>
-                                    </div>
-                                    <div class="container_missoes">
-                                        <p class="titulo_conquista">Amei</p>
-                                        <img class="icon_conquista" src="../assets/IMAGENS/conquista_amei.png" alt="">
-                                        <p class="concluido">1/1</p>
-                                    </div>
-
-                                    <div class="container_missoes">
-                                        <p class="titulo_conquista">Escreva</p>
-                                        <img class="icon_conquista" src="../assets/IMAGENS/conquista_escreva.png" alt="">
-                                        <p class="concluido">1/1</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 </section>
                 </div>
                 </div>

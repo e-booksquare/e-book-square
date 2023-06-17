@@ -138,6 +138,7 @@ header {
 .block-right {
   display: flex;
   align-items: center;
+  position: relative;
   gap: 30px;
   margin-left: -20px;
 }

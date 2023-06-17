@@ -93,9 +93,9 @@ if(isset($_GET['obra'])){
                                         ?>
                                             ../assets/IMAGEM_USUARIO/<?=$obrasCapa['foto_obra'];?> ?>
                                         <?php } else { 
-                                            $semIMG = "Clique aqui para adicionar a imagem";
+                                            $semIMG = "Clique aqui para <br> adicionar a imagem";
                                         ?>
-                                            ../assets/IMAGENS/icon_subir_imagem.png
+                                          
                                         <?php } ?> 
                                         " alt="" id="img_bd <?php if (!empty($obrasCapa['foto_obra'])) { echo ' imgbdtamanho';}?>" >
                                         <p class="sem_imagem_text" id="sem_imagem_text"><?=$semIMG;?></p>

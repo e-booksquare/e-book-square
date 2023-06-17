@@ -47,6 +47,24 @@ if ($_GET['obra']) {
             <p class="text_historia_adulta">Está historia tem uma classificao adulta
         </div>
     <?php } ?>
+
+    <section class="modal_excluir_obra">
+        <div class="container_excluir_obra">
+            <div class="header_excluir_obra">
+                <p class="exclusao">Deseja excluir em capitulo</p>
+                <p class="aviso_exclusao">Depois de excluido não será possivel recupera-lo</p>
+            </div>
+            <div class="botoes_excluir_cap">
+                <button type="submit" class="confir_exclusao">
+                    Confirmar
+                </button>
+                <button onclick="cancel_exclusao()" class="cancen_exclusao">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </section>
+
     <main>
 
         <section class="informacoes_da_obra">
@@ -83,9 +101,7 @@ if ($_GET['obra']) {
 
                                 <span id="obraamei" style="user-select: none; color: red;" data-id="<?= $idObra; ?>"></span>
 
-                                <p data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
-                                    <i class="bi bi-exclamation-triangle icon"></i> 
-                                </p>
+                            
                                     
                             </div>
                         </div>
@@ -141,15 +157,7 @@ if ($_GET['obra']) {
                     <p><span class="titulo_info">Palavras: </span><span>
                             <?= $classLog->quatityCapWord($idObra); ?>
                         </span></p>
-                    <p><span class="titulo_info">Finalizada: </span>
-                        <span>
-                            <?php if ($obrasCapa['Finalizado'] == 0) {
-                                echo "Não";
-                            } else {
-                                echo "Sim";
-                            } ?>
-                        </span>
-                    </p>
+                    
                 </div>
             </div>
         </section>
@@ -187,9 +195,11 @@ if ($_GET['obra']) {
                                 <form
                                     action="../../Model/valida_cap.php?obra=<?= $idObra ?>&method=remove&cap=<?= $value['ID_capitulo']; ?>"
                                     method="post">
-                                    <button type="submit">
+                                    <!-- <button type="submit">
                                         <i class="bi bi-trash-fill icon_cap"></i>
-                                    </button>
+                                    </button> -->
+
+                                        <a href="#"><i onclick="modal_exclusao()" class="bi bi-trash-fill icon_cap"></i></a>
                                 </form>
                             </div>
                         <?php } ?>
@@ -279,68 +289,13 @@ if ($_GET['obra']) {
         </section> -->
 
 
-        <section class="comentario">
-            <div class="container_escrever_comentario">
-                <div class="imagem_nome_span">
-                    <div>
-                        <img class="ImagemUser_escrever_comentario" src="
-                    <?php if (isset($dados_usuario['foto']) && !empty($dados_usuario['foto'])) { ?>
-                                    ../assets/IMAGEM_USUARIO/<?= $dados_usuario['foto']; ?>
-                                <?php } else { ?>
-                                    ../assets/IMAGENS/blank.jpg
-                                <?php } ?>  
-                    " alt="">
-                        <span class="NomeUser_escrever_comentario">
-                            <?= $dados_usuario['nome']; ?>
-                        </span>
-                    </div>
-                    <div>
-                        <span>Contém spoiler</span>
-                        <input type="checkbox" name="" id="">
-                    </div>
-                </div>
-                <div class="escrever_comentario">
-                    <textarea name="" id="" cols="30" rows="5"></textarea>
-                </div>
-                <div class="enviar">
-                    <button type="submit">Enviar</button>
-                </div>
-            </div>
-        </section>
+        
     </main>
 
 
 
 
-    <!-- modal denunciar -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="fs-5">Denunciar</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            
-            <div class="modal-body">
-                <div>
-                    <p id="title_denuncia">Denunciar a obra: <strong><?= $obrasCapa['nome_obra']; ?></strong> do autor(a) <em><?= $dados_usuario['nome']; ?></em></p>
-                </div>
-                <div class="mb-3">
-                    <label for="message-text" class="col-form-label">
-                        Motivo:
-                    </label>
-                    <textarea class="form-control" id="message-text" placeholder="Digite aqui o motivo da denúncia..."></textarea>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Enviar</button>
-            </div>
-
-            </div>
-        </div>
-    </div>
-
+   
     <input type="hidden" value="<?= $idObra; ?>" id="IDObra">
 
     <?php include_once 'footer.php' ?>
@@ -388,6 +343,24 @@ if (exampleModal) {
     const modalTitle = exampleModal.querySelector('.modal-title')
     const modalBodyInput = exampleModal.querySelector('.modal-body input')
   })
+}
+
+
+function cancel_exclusao(){
+    document.querySelector(".modal_excluir_obra").style.display="none";
+    document.querySelector("main").classList.remove("filtro");
+    document.querySelector("footer").classList.remove("filtro");
+    document.querySelector("header").classList.remove("filtro");
+    document.querySelector(".container_historia_adulta").classList.remove("filtro");
+}
+
+function modal_exclusao(){
+    document.querySelector(".modal_excluir_obra").style.display="flex";
+    document.querySelector("main").classList.add("filtro");
+    document.querySelector("footer").classList.add("filtro");
+    document.querySelector("header").classList.add("filtro");
+    document.querySelector(".container_historia_adulta").classList.add("filtro");
+   
 }
 </script>
 

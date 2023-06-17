@@ -408,6 +408,7 @@ main {
 
 .filtro {
   filter: blur(4px);
+  user-select: none;
 }
 
 .textarea_responder_comentario {
@@ -578,3 +579,77 @@ textarea#message-text::placeholder {
 label.col-form-label {
   margin-bottom: -5px;
 }
+
+
+.modal_excluir_obra{
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_excluir_obra{
+  background-color: white;
+  padding: 15px;
+  height: 180px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 0px rgb(58, 58, 58);
+}
+
+.header_excluir_obra p{
+  text-align: center;
+}
+
+.exclusao{
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.aviso_exclusao{
+  font-style: italic;
+  font-size: 12pt;
+  color: rgb(31, 31, 31);
+}
+
+.botoes_excluir_cap{
+  display: flex;
+  margin-top: 15px;
+  gap: 25px;
+}
+
+.botoes_excluir_cap button{
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.confir_exclusao{
+  background-color: red;
+  color: white;
+}
+
+.cancen_exclusao{
+  background-color: #303030;
+  color: white;
+}
+
+.confir_exclusao:hover{
+  background-color: rgb(255, 62, 62);
+}
+
+.cancen_exclusao:hover{
+  background-color: #555555;
+}
+

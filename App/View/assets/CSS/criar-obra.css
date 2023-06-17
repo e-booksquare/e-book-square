@@ -261,7 +261,7 @@ select{
 .sem_imagem{
     position: relative;
     width: 100%;
-    height: 94%;
+    height: 100%;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -271,9 +271,18 @@ select{
     bottom: 0;
 }
 
+.sem_imagem img{
+    min-width: 280px;
+    min-height: 450px;
+    max-width: 280px;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
 #sem_imagem_text{
     position: absolute;
     z-index: 2;
     text-align: center;
-    margin-top: 140px;
+    margin-top: 10px;
 }

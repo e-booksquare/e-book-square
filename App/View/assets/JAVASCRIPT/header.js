@@ -22,7 +22,7 @@ $(document).ready(function (){
                 $('#pesquisa').keypress(function(event) {
                     if (event.which === 13) {
                       event.preventDefault();
-                      window.location.href = `http://localhost/e_book_square/App/View/pages/pesquisa.php?search=${nome}`;
+                      window.location.href = `http://localhost/e-book-square/App/View/pages/pesquisa.php?search=${nome}`;
                     }
 
                   });

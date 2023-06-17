@@ -131,6 +131,10 @@ function setInfoImg($imgUserBD){
         $foto = null;
         if(!empty($imgUserBD)){
             $foto = $imgUserBD;
+
+            if(isset($_POST['submit'])){
+                $foto = $classLog->imgGenerator();
+            }
         }
         return $foto;
     }

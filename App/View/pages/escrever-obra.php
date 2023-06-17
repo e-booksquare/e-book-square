@@ -73,9 +73,9 @@
           <section class="botoes">
             <div class="container_botoes">
               <div class="botoes_salvar_cancelar">
-                <a href="#"><p class="sa" onclick="salvar()">
+                <button href="#"><p class="sa" onclick="salvar()">
                   PUBLICAR 
-                </p></a>
+                </p></button>
                 <a href="feed.php"><p class="cancelar">CANCELAR</p></a>
               </div>
             </div>
@@ -84,58 +84,6 @@
 
 
       </main>
-
-      <div class="container_obra_filtro">
-            <div class="container_obra_header">
-                <span>5 minutos atrás</span> 
-                <div class="dropdown">
-                    <i onclick="toggleDropdown(event)" class="bi bi-three-dots-vertical dropdown-button" ></i>
-                </div>
-            </div>
-            <div class="container_obra_titulo">
-               <img class="imagem_autor_obra_filtro" src="
-                                
-                                <?php if (isset($dados_usuario['foto']) && !empty($dados_usuario['foto'])) { ?>
-                        ../assets/IMAGEM_USUARIO/<?= $dados_usuario['foto'] ?>
-                                <?php } else { ?>
-                        ../assets/IMAGENS/blank.jpg
-                                <?php } ?> 
-                    
-                    " alt="Foto de perfil" name="perfil" id="perfil-header"">
-                <p><span class="titulo_autor_obra_filtro"><?= $dados_usuario['nome']; ?></span> publicou uma nova obra, seja uma das primeiras pessoas a lerem o primeiro capítulo !!</p>
-            </div>
-            <div class="mensagem_autor">
-                <textarea placeholder ="Escreva algo em sua publicação" rows="3"></textarea>
-            </div>
-                <div class="container_obra_info">
-                    <div class="imagem">
-                        <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/03/22/whatsapp-image-2023-03-22-at-10-40-52-ubu8znvqrucm.jpeg">
-                    </div>
-                    <div class="info">
-                        <p class="titulo_obra_filtros">Titulo obra</p>
-                        <div class="categorias_filtros">
-                            <span>Ficção</span>
-                            <span>Espaço</span>
-                            <span>Aventura</span>
-                            <span>Terror</span>
-                            <span>Romance</span>
-                            <span>Vampiros</span>
-                            <span>Ficção</span>
-                            <span>Espaço</span>
-                            <span>Aventura</span>
-                        </div>
-                        <p class="descrição_historia">Passou metade da vida trabalhando na biblioteca pública, organizando livros empoeirados em estantes velhas. Nesses momentos só pensava em duas coisas: na garota que observava no ônibus ao voltar para casa e nas histórias de aventuras que pretendia escrever algum dia — mas que na época existiam apenas na imaginação. Os anos passaram e ele nunca falou com a garota; sua principal obra, um manual fajuto de consulta ao época existiam apenas na imaginação. Os anos passaram e ele nunca falou counca fal</p>
-                    </div>
-                </div>
-            <div class="container_obra_footer">
-                <button type="submit" name="submit" ondblclick="exibir_texto_alert()" 
-                value="<?php if(isset($_GET['action']) && $_GET['action'] == 'atualizar'){ echo "atualizar";} else{echo "Publicar";} ?>">
-                <?php 
-                  if(isset($_GET['action']) && $_GET['action'] == 'atualizar'){ echo "ATUALIZAR";} else{echo "Publicar";} 
-                ?></button>
-                <p onclick="cancelar_modal()">CANCELAR</p>
-            </div>
-        </div>
         </form> 
         <?php
         include_once("footer.php");
