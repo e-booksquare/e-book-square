@@ -99,8 +99,7 @@ if ($_GET['obra']) {
 
                         <div class="views" style="display: flex; align-items: center;">
                             <i class="bi bi-eye-fill icon"></i>
-                            (
-                            <?= $views; ?>)
+                            (<?= $views; ?>)
                         </div>
                     </div>
                 </div>

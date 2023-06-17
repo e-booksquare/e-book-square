@@ -23,7 +23,6 @@ if(isset($_GET['obra'])){
 
     $qttCatObra = count($categoria_obra);
 
-    var_dump($NomeCatArray);
     
     echo ("
     <script>

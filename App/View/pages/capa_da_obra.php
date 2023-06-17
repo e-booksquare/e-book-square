@@ -48,16 +48,18 @@ if ($_GET['obra']) {
         </div>
     <?php } ?>
 
-    <section class="modal_excluir_obra">
+    <section class="modal_excluir_obra" style="position: fixed;">
         <div class="container_excluir_obra">
             <div class="header_excluir_obra">
-                <p class="exclusao">Deseja excluir em capitulo</p>
+                <p class="exclusao">Deseja excluir o capitulo:</p><span id='nome_cap_exc'></span>
                 <p class="aviso_exclusao">Depois de excluido não será possivel recupera-lo</p>
             </div>
             <div class="botoes_excluir_cap">
-                <button type="submit" class="confir_exclusao">
-                    Confirmar
-                </button>
+                <a id="submit_cap_exc">
+                    <button class="confir_exclusao">
+                        Confirmar
+                    </button>
+                </a>
                 <button onclick="cancel_exclusao()" class="cancen_exclusao">
                     Cancelar
                 </button>
@@ -172,11 +174,13 @@ if ($_GET['obra']) {
                             ?>
                         </span></p>
                 </div>
-                <?php foreach ($capitulos as $indice => $value) { ?>
+                <?php foreach ($capitulos as $indice => $value) { 
+                        $tituloCap = $value["titulo_cap"];
+                    ?>
                     <div class="container_capitulo">
                         <a href="preview.php?obra=<?= $idObra; ?>&cap=<?= $indice + 1; ?>">
                             <p class="titulo_capitulo">
-                                <?= $value['titulo_cap']; ?>
+                                <?= $tituloCap; ?>
                             </p>
                             <p>Capitulo <span>
                                     <?= $indice + 1; ?>
@@ -192,15 +196,9 @@ if ($_GET['obra']) {
                                         <i class="bi bi-pencil-square icon_cap"></i>
                                     </button>
                                 </a>
-                                <form
-                                    action="../../Model/valida_cap.php?obra=<?= $idObra ?>&method=remove&cap=<?= $value['ID_capitulo']; ?>"
-                                    method="post">
-                                    <!-- <button type="submit">
+                                    <div style='cursor: pointer;' onclick="modal_exclusao(<?=$value['ID_capitulo'];?>, '<?=$tituloCap?>', <?=$idObra?>)">
                                         <i class="bi bi-trash-fill icon_cap"></i>
-                                    </button> -->
-
-                                        <a href="#"><i onclick="modal_exclusao()" class="bi bi-trash-fill icon_cap"></i></a>
-                                </form>
+                                    </div>
                             </div>
                         <?php } ?>
                     </div>
@@ -354,14 +352,19 @@ function cancel_exclusao(){
     document.querySelector(".container_historia_adulta").classList.remove("filtro");
 }
 
-function modal_exclusao(){
+function modal_exclusao(id, nome, idObra){
     document.querySelector(".modal_excluir_obra").style.display="flex";
     document.querySelector("main").classList.add("filtro");
     document.querySelector("footer").classList.add("filtro");
     document.querySelector("header").classList.add("filtro");
     document.querySelector(".container_historia_adulta").classList.add("filtro");
+    let url = `../../Model/valida_cap.php?method=remove&cap=${id}&obra=${idObra}`;
+    document.querySelector("#nome_cap_exc").textContent = nome;
+    document.querySelector("#submit_cap_exc").setAttribute("href", url);
    
 }
+
+
 </script>
 
 </html>

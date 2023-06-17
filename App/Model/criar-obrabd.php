@@ -133,7 +133,7 @@ function setInfoImg($imgUserBD){
             $foto = $imgUserBD;
 
             if(isset($_POST['submit'])){
-                $foto = $classLog->imgGenerator();
+                $foto = rand(1,12);;
             }
         }
         return $foto;
