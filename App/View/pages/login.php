@@ -38,9 +38,6 @@ include_once "../../Model/class-log.php";
 
                         <div class="botao_login">
                             <button type="submit">Logar</button>
-                            <label for="remenber" class="Continua_Cone" style="cursor: pointer;">
-                                <input type="checkbox" name="remenber" id="remenber" <?php if(isset($_COOKIE['ebs-user'])){echo 'CHECKED';}?>>Manter conectado
-                            </label>
                         </div>
                     </div>
                     <div>
@@ -106,9 +103,6 @@ include_once "../../Model/class-log.php";
 
                 <div class="botao_login">
                     <button type="submit">Logar</button>
-                    <div class="Continua_Cone">
-                        <input type="checkbox" name="" id="">Manter conectado
-                    </div>
                 </div>
             </div>
             <div>

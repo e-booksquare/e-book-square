@@ -35,6 +35,7 @@
 
 		<link rel="stylesheet" href="../assets/Editor_Texto/CSS/editor_texto.css">
 		<link rel="stylesheet" href="../assets/Editor_Texto/CSS/rte_theme_default.css" />
+    <link rel="shortcut icon" href="../assets/IMAGENS/logo-removebg-preview.png" type="image/x-icon">
 		<script type="text/javascript" src="../assets/Editor_Texto/JS/rte.js"></script>
 		<script>RTE_DefaultConfig.url_base='../assets/Editor_Texto/richtexteditor'</script>
 		<script type="text/javascript" src='../assets/Editor_Texto/richtexteditor/plugins/all_plugins.js'></script>
@@ -51,7 +52,7 @@
               $capitulo_Count = $classLog->Count('ID_capitulo', 'capitulo', ["obra_FK =".$_GET['obra']]); 
             ?>
               <div class="Titulo_entrada">
-                  <input maxlength="" class="titulo_obra" name="titulo_historias" id="titulo_historias" placeholder="Título do Capitulo" value=" <?php if(isset($_GET['action']) && $_GET['action'] == 'atualizar'){ echo $cap['titulo_cap'] ;}else{ echo "Capítulo ".$capitulo_Count+1;}?>" autofocus>
+                  <input maxlength="40" class="titulo_obra" name="titulo_historias" id="titulo_historias" placeholder="Título do Capitulo" value=" <?php if(isset($_GET['action']) && $_GET['action'] == 'atualizar'){ echo $cap['titulo_cap'] ;}else{ echo "Capítulo ".$capitulo_Count+1;}?>" autofocus>
               </div>
               
 
