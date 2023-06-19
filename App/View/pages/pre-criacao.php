@@ -39,11 +39,7 @@ include_once '../../Model/verificacao.php';
                 <div class="mesma_linha" style="margin: 50px 0;">
                 <a href="capa_da_obra.php?obra=<?=$value['ID_obra'];?>">
                     <img class="imagem_obra" src="
-                    <?php if(isset($value['foto_obra']) && !empty($value['foto_obra'])){ ?>
-                        ../assets/IMAGEM_USUARIO/<?=$value['foto_obra'];?>
-                    <?php } else{?>
-                        ../assets/IMAGENS/sem imagem.gif
-                    <?php }?> 
+                    <?=$classLog->getObraImg($value['foto_obra']);?>  
                     " alt="">
                 </a>
                     <div class="info_obra">

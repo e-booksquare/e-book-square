@@ -115,11 +115,7 @@ if ($_GET['obra']) {
         <section class="info_obra">
             <div class="imagem_historia">
                 <img class="imagem_pe" src="
-                <?php if (isset($obrasCapa['foto_obra']) && !empty($obrasCapa['foto_obra'])) { ?>
-                                    ../assets/IMAGEM_USUARIO/<?= $obrasCapa['foto_obra']; ?>
-                                <?php } else { ?>
-                                    ../assets/IMAGENS/sem imagem.gif
-                                <?php } ?>  
+                <?=$classLog->getObraImg($obrasCapa['foto_obra']);?>  
                 " alt="" srcset="">
             </div>
             <div class="sobre_obra">
@@ -231,12 +227,8 @@ if ($_GET['obra']) {
                     <?php foreach ($obrasUserVisitado as $indice => $value) { ?>
                         <div class='obra'>
                             <a href="capa_da_obra.php?obra=<?= $value['ID_obra']; ?>">
-                                <img src='
-                            <?php if (isset($value['foto_obra']) && !empty($value['foto_obra'])) { ?>
-                                                ../assets/IMAGEM_USUARIO/<?= $value['foto_obra']; ?>
-                                            <?php } else { ?>
-                                                ../assets/IMAGENS/sem imagem.gif
-                                            <?php } ?>    
+                                <img src='  
+                                <?=$classLog->getObraImg($value['foto_obra']);?>   
                             ' alt='' style="border: 1px solid black;">
                             </a>
                             <p class='nome_historia_recente'>

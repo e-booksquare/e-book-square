@@ -145,11 +145,8 @@ include_once '../../Model/verificacao.php';
                                 <a href="capa_da_obra.php?obra=<?= $ObraCap['ID_obra']; ?>">
                                     <div class="bodyPub">
                                         <div class="obraPub">
-                                            <img class="fotoUserObra" src="<?php if (isset($fotoUserObra) && !empty($fotoUserObra)) { ?>
-                        ../assets/IMAGEM_USUARIO/<?= $fotoUserObra; ?>
-                    <?php } else { ?>
-                        ../assets/IMAGENS/sem imagem.gif
-                    <?php } ?>" alt="" width="150" height="230" style="border-radius: 5px;">
+                                            <img class="fotoUserObra" src="
+                                                <?=$classLog->getObraImg($fotoUserObra);?>  ?>" alt="" width="150" height="230" style="border-radius: 5px;">
                                             <div class="infoObraPub">
                                                 <h2>
                                                     <?= $ObraCap['nome_obra']; ?>

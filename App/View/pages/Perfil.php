@@ -258,11 +258,7 @@
                                         <a href="capa_da_obra.php?obra=<?= $value['ID_obra']; ?>">
                                             <div class="foto_obras">
                                                 <img src="
-                                                <?php if (isset($value['foto_obra']) && !empty($value['foto_obra'])) { ?>
-                                                    ../assets/IMAGEM_USUARIO/<?= $value['foto_obra']; ?>
-                                                <?php } else { ?>
-                                                ../assets/IMAGENS/sem imagem.gif
-                                                <?php } ?> 
+                                                <?=$classLog->getObraImg($value['foto_obra']);?>  
                                                 " alt="Imagem da obra" width="100%" height="100%">
                                                 </div>
                                                 <div>
@@ -353,11 +349,7 @@
                             <a href="capa_da_obra.php?obra=<?=$IdObraFav['obra_FK'];?>">
                                 <div class="img_obra_lendo">
                                     <img class="img_obra_lendo" src="
-                                    <?php if (isset($ObraFavUserPerfil['foto_obra']) && !empty($ObraFavUserPerfil['foto_obra'])) { ?>
-                                                        ../assets/IMAGEM_USUARIO/<?= $ObraFavUserPerfil['foto_obra']; ?>
-                                                    <?php } else { ?>
-                                                    ../assets/IMAGENS/sem imagem.gif
-                                                    <?php } ?>
+                                    <?=$classLog->getObraImg($ObraFavUserPerfil['foto_obra']);?>  
                                     " alt="">
                                     
                                 </div>

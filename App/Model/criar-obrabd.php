@@ -133,7 +133,7 @@ function setInfoImg($imgUserBD){
             $foto = $imgUserBD;
 
             if(isset($_POST['submit'])){
-                $foto = rand(1,12);;
+                $foto = rand(1,12);
             }
         }
         return $foto;

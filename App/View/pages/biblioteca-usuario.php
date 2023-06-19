@@ -130,11 +130,7 @@
                             
                                 <div>
                                     <img class="imagem_obra" src="
-                                    <?php if (isset($value['foto_obra']) && !empty($value['foto_obra'])) { ?>
-                                                        ../assets/IMAGEM_USUARIO/<?= $value['foto_obra']; ?>
-                                                    <?php } else { ?>
-                                                    ../assets/IMAGENS/sem imagem.gif
-                                                    <?php } ?>
+                                    <?=$classLog->getObraImg($value['foto_obra']);?>  
                                     " alt="">
                                     
                                
@@ -212,11 +208,7 @@
                             <a href="capa_da_obra.php?obra=<?= $ObraFavUserPerfil['ID_obra']; ?>">
                                 <div style="position: relative; width: 170px;">
                                     <img class="imagem_obra" src="
-                                        <?php if (isset($ObraFavUserPerfil['foto_obra']) && !empty($ObraFavUserPerfil['foto_obra'])) { ?>
-                                                            ../assets/IMAGEM_USUARIO/<?= $ObraFavUserPerfil['foto_obra']; ?>
-                                                        <?php } else { ?>
-                                                        ../assets/IMAGENS/sem imagem.gif
-                                                        <?php } ?>
+                                    <?=$classLog->getObraImg($ObraFavUserPerfil['foto_obra']);?>  
                                     " alt="">
                                     
                                 </div>

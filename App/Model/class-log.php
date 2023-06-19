@@ -774,6 +774,24 @@ class log
         }
     }
 
+    function getObraImg($img)
+    {
+        $imgObra = "../assets/IMAGENS/default5.jpeg";;
+
+        if (isset($img) && !empty($img)) {
+
+            $numero = intval($img); 
+
+            if ($numero > 0 && $numero < 13) {
+                $imgObra = "../assets/IMAGENS/default" . $img . ".jpeg";
+            } else {
+                $imgObra = "../assets/IMAGEM_USUARIO/" . $img;
+            }
+        }
+        
+        return $imgObra;
+    }
+
     function ifProfileImgExist($img, $imgUserLog)
     {
 
