@@ -95,12 +95,9 @@
 
     <main id="main" class="">
             <div class="fundo">
-                <?php if (isset($dadosUserPerfil['banner']) && !empty($dadosUserPerfil['banner'])) { ?>
-                <img class="editar_img" class="pelicula"
-                src="  ../assets/IMAGEM_USUARIO/<?= $dadosUserPerfil['banner']; ?>" alt="Foto de fundo do perfil">
-                <?php } else { ?>
-                <img class="editar_img" class="pelicula" src="../assets/IMAGENS/imagem_padrao_banner.webp">
-                <?php } ?>
+                <img class="editar_img" class="pelicula" src="
+                    <?=$classLog->ifBannerImgExist($dadosUserPerfil['banner']);?>  
+                ">
                 <div class="icone">
                     <div class="avatar">
                         <img class="editar_img" src="
@@ -258,7 +255,9 @@
                                         <a href="capa_da_obra.php?obra=<?= $value['ID_obra']; ?>">
                                             <div class="foto_obras">
                                                 <img src="
+
                                                 <?=$classLog->getObraImg($value['foto_obra']);?>  
+                                                
                                                 " alt="Imagem da obra" width="100%" height="100%">
                                                 </div>
                                                 <div>
@@ -401,11 +400,7 @@
                         <div class="seguidor">
                             <div class="banner_seguidor">
                                 <img src="
-                                <?php if (isset($usersSeguindo['banner']) && !empty($usersSeguindo['banner'])) { ?>
-                                                    ../assets/IMAGEM_USUARIO/<?= $usersSeguindo['banner']; ?>
-                                                <?php } else { ?>
-                                                    ../assets/IMAGENS/blank.jpg
-                                                <?php } ?>  
+                                    <?=$classLog->ifBannerImgExist($usersSeguindo['banner']);?>   
                                 " alt="">
 
                                 <div class="perfil_seguidor">
@@ -460,11 +455,7 @@
                         <div class="seguidor">
                             <div class="banner_seguidor">
                                 <img src="
-                                <?php if (isset($usersSeguindo['banner']) && !empty($usersSeguindo['banner'])) { ?>
-                                                    ../assets/IMAGEM_USUARIO/<?= $usersSeguindo['banner']; ?>
-                                                <?php } else { ?>
-                                                    ../assets/IMAGENS/blank.jpg
-                                                <?php } ?> 
+                                <?=$classLog->ifBannerImgExist($usersSeguindo['banner']);?> ?> 
                                 " alt="">
 
                                 <div class="perfil_seguidor">

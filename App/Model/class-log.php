@@ -812,6 +812,18 @@ class log
         return $ImgProfile;
     }
 
+    function ifBannerImgExist($bannerUser)
+    {
+
+        $banner = "../assets/IMAGENS/bannerDefault.jpg";
+
+        if (isset($bannerUser) && !empty($bannerUser)) {
+            $banner = "../assets/IMAGEM_USUARIO/$bannerUser";
+        }
+
+        return $banner;
+    }
+
     public function findNotAll($conta_obra)
     {
         $notifications = $this->findAll(

@@ -35,11 +35,7 @@ if(isset($_SESSION['msg-perfil-edit']) ){
         <!-- Alterar banner -->
         <div class="banner_editar">
             <img class="editar_img" src="
-                    <?php if (empty($dados_usuario['banner'])) { ?>
-                        ../assets/IMAGENS/imagem_padrao_banner.webp
-                    <?php } else { ?>
-                        ../assets/IMAGEM_USUARIO/<?= $dados_usuario['banner'];
-                    } ?>
+            <?=$classLog->ifBannerImgExist($dados_usuario['banner']);?>  
                         " alt="" style="width: 100%;" id="banner_perfil">
             <button type="submit" style="cursor: pointer;" name="deleteBanner"><img class="lixeira_banner"
                     src="..\assets\IMAGENS\icon_remover.png" alt=""></button>

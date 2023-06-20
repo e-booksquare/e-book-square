@@ -242,44 +242,7 @@ if ($_GET['obra']) {
                     <?php } ?>
                 </div>
             </div>
-        </section>
-        
-        <!-- <section class="obras_recent_autor">
-            <p class="titulo_obras_recen">Mais historias de <strong><?= $obrasCapa['nome']; ?></strong></p>
-
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"> 
-                <div class='obra'>
-                    <a href="capa_da_obra.php?obra=<?= $value['ID_obra']; ?>">
-                        <img src='
-                        <?php if (isset($value['foto_obra']) && !empty($value['foto_obra'])) { ?>
-                            ../assets/IMAGEM_USUARIO/<?= $value['foto_obra']; ?>
-                            <?php } else { ?>
-                            ../assets/IMAGENS/sem imagem.gif
-                            <?php } ?>    
-                        '' style="border: 1px solid black;">
-                    </a>
-                    <p class='nome_historia_recente'>
-                        <?= $value['nome_obra'] ?>
-                    </p>
-                    <div class="ameis_da_obra ameiOutras obrasOutras" id="obraameioutra<?= $indice; ?>"
-                        data-id="<?= $value['ID_obra'] ?>">
-                    </div>
-                </div>  
-
-                    </div>
-                   
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-
-            </div>
-        </section> -->
-
-
-        
+        </section>  
     </main>
 
 

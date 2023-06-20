@@ -36,11 +36,10 @@
     <main id="main" class="">
 
             <div class="fundo">
-                <?php if(isset($dadosUserPerfil['banner']) && !empty($dadosUserPerfil['banner'])){ ?>
-                <img class="editar_img" class="pelicula" src="  ../assets/IMAGEM_USUARIO/<?= $dadosUserPerfil['banner'];?>" alt="Foto de fundo do perfil">
-                <?php } else{?>
-                    <img class="editar_img" class="pelicula" src="../assets/IMAGENS/imagem_padrao_banner.webp">
-                <?php }?> 
+                <img class="editar_img" class="pelicula" src=" 
+                    <?=$classLog->ifBannerImgExist($dadosUserPerfil['banner']);?>  
+                " alt="Foto de fundo do perfil">
+
                 <div class="icone">
                     <div class="avatar">
                         <img class="editar_img" src="
