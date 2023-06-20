@@ -23,15 +23,6 @@ function renderDados($classLog){
       $subCmts = $classLog->findAll(["*"], "comentario", ["WHERE tipo = 6 and ID_tipo = $IDCmt"]);
 
    echo cmtContentComp($cmt['user_FK'], $UserCmt['nome'], $UserCmt['codigo'], $imgPerfil, $cmt['conteudo'], $cmt['created_at'], $classLog);
-
-    foreach ($subCmts as $key => $subCmt) {
-
-        $IDSubCmt = $subCmt['user_FK'];
-        $UserSubCmt = $classLog->find(["ID_user, nome, codigo, foto"], "usuario", ["WHERE ID_user = $IDSubCmt"]);
-        $imgPerfil = $classLog->ifProfileImgExist($UserSubCmt['foto'], $UserLog['foto']);
-
-       echo subCmtComp($cmt['user_FK'], $UserSubCmt['nome'], $UserSubCmt['codigo'], $imgPerfil, $subCmt['conteudo'], $subCmt['created_at'], $subCmt['spoiler'], $classLog);
-    }
     
     echo cmtTextareaComp($UserLog['nome'], $imgPerfil, $IDCmt);
 
@@ -110,38 +101,6 @@ function cmtTextareaComp($nomeUser, $fotoUser, $IDCmt){
 
     return $result;
 }
-
-function subCmtComp($IDUser, $nomeUser, $codigoUser, $fotoUser, $contentSubCom, $dataSubCom, $spoiler, $classLog){
-
-    [$btnSpoiler, $classSpoiler] = ""; 
-
-    if($spoiler == 1){
-        $btnSpoiler = "<div onclick='tirar_filtro(1)' id='botao_VerSpoiler' class='ver_comentario_spoiler ver_comentario_spoiler1'> <p>Ver Comentário com spoiler</p> </div>";
-        $classSpoiler = "spoiler";
-    }
-    $dataComPassados = $classLog->getTempoPassados($dataSubCom);
-
-   $result = "<div class='respostas_comentario_publicado_spoiler'>
-                    $btnSpoiler
-                    <div class='imagem_nome_span'>
-                        <div>
-                            <img class='ImagemUser_escrever_comentario'
-                                src='$fotoUser->imgUser'
-                                alt=''>
-                            <span class='NomeUser_escrever_comentario'>$nomeUser</span>
-                        </div>
-                        <div>
-                            <span>$dataComPassados</span>
-                        </div>
-                    </div>
-                    <div id='texto1' class='texto_publicado $classSpoiler'>
-                        <span class='texto'>$contentSubCom</span>
-                    </div>
-                </div>";
-
-    return $result;
-}
-// <span class='codigo_user_comentario'>@laysla</span>
 
 
 

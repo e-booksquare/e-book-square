@@ -419,9 +419,6 @@
                                         <div class="nivel_seguidor">
                                             <p>Nv <span><?=$RankUserSeguidores['levelRAN'];?></span></p>
                                         </div>
-                                        <div class="seguir">
-                                            <button type="submit">Seguindo</button>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="seguidor_info">
@@ -473,9 +470,6 @@
                                     <div class="nivel_seguir">
                                         <div class="nivel_seguidor">
                                             <p>Nv <span><?=$RankUserSeguindo['levelRAN'];?></span></p>
-                                        </div>
-                                        <div class="seguir">
-                                            <button type="submit">Seguindo</button>
                                         </div>
                                     </div>
                                 </div>
@@ -578,29 +572,6 @@
             document.querySelector("#tela_remover").classList.remove("ativo");
             document.querySelector('body').style.overflowY = 'auto';
         }
-
-    $("#btn_seg_user").on("click",function(){
-
-        var IDSeg = $("#idseguir").val();
-        var segclick = "on";
-
-        $.ajax({
-            url: `../../Model/seguidor_bd.php?action=renderSeg&userPerfil=${IDSeg}&segclick=${segclick}`,
-            success: (btn_seg_user) => $("#btn_seg_user").html(btn_seg_user)
-        })
-        })
-
-        var IDSeg = $("#idseguir").val();
-
-        // RENDERIZAR DADOS E HTML DO NÍVEL APÓS O CARREGAMENTO DA PÁGINA
-        $.ajax({
-        url: `../../Model/seguidor_bd.php?action=renderSeg&userPerfil=${IDSeg}`,
-        success: (btn_seg_user) => $("#btn_seg_user").html(btn_seg_user)
-    })
-
-            
-        
-
         
         $('.obraPerfil').on('click', function(){
 

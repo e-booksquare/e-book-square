@@ -78,8 +78,48 @@
             </li>
             <?php if(isset($_SESSION['ID_user']) && !empty($_SESSION['ID_user'])){ ?>
 
-        
-            <?php }?>
+<li class="notificacoes">
+    <i class="bi bi-bell-fill" onclick="abrir_notificacao()" id="iconNot"></i>
+
+<!--  numberNot  -->
+    <div class='numeros_notificacoes' id="numberNot" onclick='abrir_notificacao()' style='cursor: pointer;'></div>
+    <div class="container_notificacao">
+        <nav class="nav_notificacao">
+            <ul>
+                <li id="minha_conta" class="itens selecionado" onclick="minha_conta()">Minha conta</li>
+                <li class="divisao"></li>
+                <li id="minha_historia" class="itens" onclick="minha_historia()">Minhas Historias</li>
+            </ul>
+        </nav>
+        <div class="container_marcar_todos_excluir">
+            <div class="marcar_todos">
+                <input id="checkAll" onclick="checar_todas()" type="checkbox"><span><label for="checkAll" onclick="checar_todas()"> Marcar todos os itens<label></span>
+            </div>
+            <div class="excluir_not" onclick="excluir_not()">
+                <i class="bi bi-trash" ></i><span>Excluir notificações</span>
+            </div>
+            
+        </div>
+
+            <div style="display: flex; justify-content: center;">
+                <!-- <button class="excluir_not_button" type="submit">Excluir os itens selecionados</button> -->
+            </div>
+        <div id="container_minha_conta" class="minha_conta">
+
+            <table id="minha_conta_not"></table>
+
+        </div>
+        <div id="container_minha_historia"  class="minha_historia">
+
+            <table id="minha_historia_not"></table>
+
+            <div style="display: flex; justify-content: center;">
+                <button class="excluir_not_button" id="exc">Excluir os itens selecionados</button>
+            </div>
+        </div>
+    </div>
+</li>
+<?php }?>
             
 
             <!-- Responsividade menu lateral -->
@@ -132,7 +172,7 @@
                                 <div>
                                     <a href="perfil.php?user=<?=$dados_usuario['ID_user']?>">
                                         <li class="opcoes_dropdown" style="font-weight: 600;">Meu perfil</li></a>
-                                    <a href="chat.php">
+                                    <a href="chat.php" target="_blank">
                                         <li class="opcoes_dropdown">Chat</li>
                                     </a>
                                     <a href="editar-perfil.php?user=<?=$dados_usuario['ID_user']?>">

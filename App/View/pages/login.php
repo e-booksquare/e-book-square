@@ -1,8 +1,8 @@
 <?php
 session_start();
 include_once "../../Model/class-log.php";
-// if(isset($_SESSION['ID_user']) || !empty($_SESSION['ID_user']))
-//     {header("location: home.php"); exit();}
+if(!isset($_SESSION['ID_user']) || empty($_SESSION['ID_user']))
+    {header("location: home.php"); exit();}
 
 ?>
 
