@@ -396,7 +396,7 @@
                                      $SeguindoP = 
                                      $classLog->Count('seguidor_FK', 'seguir', ['seguidor_FK = '.$value['seguidor_FK']]);
                         ?>
-
+                        <a href="perfil.php?user=<?=$value['seguidor_FK'];?>">
                         <div class="seguidor">
                             <div class="banner_seguidor">
                                 <img src="
@@ -429,6 +429,7 @@
                             </div>
 
                         </div>
+                        </a>
                         <?php }?>
                             <!-- Termina aqui -->
                     </div>
@@ -449,6 +450,7 @@
                                     $SeguindoP = 
                                     $classLog->Count('seguidor_FK', 'seguir', ['seguidor_FK = '.$value['user_FK']]);        
                         ?>
+                         <a href="perfil.php?user=<?=$value['user_FK'];?>">
                         <div class="seguidor">
                             <div class="banner_seguidor">
                                 <img src="
@@ -481,6 +483,7 @@
                             </div>
 
                         </div>
+                        </a>
                         <?php }?>
                             <!-- Termina aqui -->
                     </div>
