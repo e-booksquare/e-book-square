@@ -172,7 +172,7 @@
                                 <div>
                                     <a href="perfil.php?user=<?=$dados_usuario['ID_user']?>">
                                         <li class="opcoes_dropdown" style="font-weight: 600;">Meu perfil</li></a>
-                                    <a href="chat.php" target="_blank">
+                                    <a href="chat.php" target="_blank" rel="noopener noreferrer">
                                         <li class="opcoes_dropdown">Chat</li>
                                     </a>
                                     <a href="editar-perfil.php?user=<?=$dados_usuario['ID_user']?>">
