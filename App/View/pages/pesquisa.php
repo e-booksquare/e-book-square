@@ -24,6 +24,7 @@ if (!isset($_SESSION['ID_user']) || empty($_SESSION['ID_user'])) {
     <link rel="stylesheet" href="../assets/CSS/pesquisa.css">
     <link rel="stylesheet" href="../assets/CSS/header.css">
     <link rel="stylesheet" href="../assets/CSS/footer.css">
+    <link rel="stylesheet" href="../assets/CSS/categoria-color.css">
     <title> Valor da pesquisa | BOOK SQUARE</title>
 </head>
 <body>
@@ -31,6 +32,7 @@ if (!isset($_SESSION['ID_user']) || empty($_SESSION['ID_user'])) {
         <?php include_once 'header.php'; ?>
 
    
+        <h1 id="pesquisaTitulo">Sala de pesquisa</h1>
         <div class="pesquisa_obra">
             <i class="bi bi-search icon roxo"></i>
             <input type="search" name="" id="inputSearchPage" 
@@ -127,6 +129,7 @@ if (!isset($_SESSION['ID_user']) || empty($_SESSION['ID_user'])) {
     </div>
 
     <?php include_once 'footer.php'; ?>
+    <script src="../assets/JAVASCRIPT/header.js"></script>
 </body>
 
 <script>
@@ -138,7 +141,7 @@ if (!isset($_SESSION['ID_user']) || empty($_SESSION['ID_user'])) {
         }
 
 
-        var limit = 1; // Limite inicial
+        var limit = 15; // Limite inicial
 
         function carregarMaisDados(limit) {
 
@@ -149,12 +152,22 @@ if (!isset($_SESSION['ID_user']) || empty($_SESSION['ID_user'])) {
                 idObras.push(dataId)
             });
 
-            // let idObraLength = idObras.length + limit
+            let idObraLength = idObras.length + limit
 
-            // if(idObraLength >= $("#total").html()){
-            //     $("#boxLoadMore").html("Todos os resultados mostrados")
-            //     return
-            // }
+            if(idObraLength >= $("#total").html()){
+                $("#boxLoadMore").html("Todos os resultados encontrados")
+                return
+            } else {
+                $("#boxLoadMore").html(`
+                    <p class="carregar-mais" id="loadMore">Carregar mais</p>
+                `)
+                return
+            }
+
+            if($("#total").html() == 0){
+                $("#boxLoadMore").html("Nenhum resultado encontrado")
+                return
+            }
 
             $.ajax({
                 url: '../../Model/page-searchbd.php',
@@ -207,7 +220,7 @@ if (!isset($_SESSION['ID_user']) || empty($_SESSION['ID_user'])) {
 
             function getSearchResult(data) {
 
-                $("#total").html(data.count);
+               
                 $('#searchContent').html(" ");
 
                 let results = data.search;
@@ -216,13 +229,14 @@ if (!isset($_SESSION['ID_user']) || empty($_SESSION['ID_user'])) {
                     $('#searchContent').append(
                         getObraStructure(e)
                     );
-                });
+                }); 
+                $("#total").html(data.count);
             }
 
             function getObraStructure(obra) {
                 let el = '';
 
-                el = `<a href="#"><div class="container-obra" data-id="${obra.idObra}">
+                el = `<a href="capa_da_obra.php?obra=${obra.idObra}"><div class="container-obra" data-id="${obra.idObra}">
                         <div class="imagem-obra">
                             <img src="${obra.imgObra}" alt="">
                         </div>
@@ -230,16 +244,7 @@ if (!isset($_SESSION['ID_user']) || empty($_SESSION['ID_user'])) {
                             <p><span class="titulo_info">Nome: </span><span>${obra.nomeObra}</span></p>
                             <p><span class="titulo_info">Autor: </span><span>${obra.autorObra}</span></p>
                             <p><span class="titulo_info">Categoria: </span>
-                                <div>
-                                    <p class="categoria">Contrarrevolucionário</p>
-                                    <p class="categoria">Contrarrevolucionário</p>
-                                    <p class="categoria">Contrarrevolucionário</p>
-                                    <p class="categoria">Contrarrevolucionário</p>
-                                    <p class="categoria">Contrarrevolucionário</p>
-                                    <p class="categoria">Contrarrevolucionário</p>
-                                    <p class="categoria">Contrarrevolucionário</p>
-                                    <p class="categoria">Contrarrevolucionário</p>
-                                </div>
+                                ${getCategoriaDaObra(obra.categoria)}
                             </p>
                             <p><span class="titulo_info">Descrição: </span><span style="word-break: break-word;">${obra.descObra}</span></p>
                         </div>
@@ -248,7 +253,19 @@ if (!isset($_SESSION['ID_user']) || empty($_SESSION['ID_user'])) {
                 return el;
             }
 
-        })
+            function getCategoriaDaObra(cat) {
+                let el = '';
+
+                cat.forEach(function (e) {
+                    let nomeCat = e.categoriaCat;
+                    let nomeCatRplc = nomeCat.replace(/\s/g, "").replace(/\+/g, "");
+                    el += `<div class="${nomeCatRplc} classe_categoria">${nomeCat}</div>`;
+                });
+
+                return el;
+            }
+
+    })
 
 </script>
 </html>

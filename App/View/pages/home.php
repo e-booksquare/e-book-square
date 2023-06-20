@@ -15,7 +15,7 @@ include_once '../../Model/verificacao.php';
     <link rel="shortcut icon" href="..\assets\IMAGENS\logo-removebg-preview.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="../assets/CSS/index.css">
     <link rel="stylesheet" href="../assets/CSS/header.css">
     <link rel="stylesheet" href="../assets/CSS/footer.css">
@@ -60,6 +60,7 @@ include_once '../../Model/verificacao.php';
         </section>
     </main>
     <?php include_once 'footer.php'; ?>
+    <script src="../assets/JAVASCRIPT/header.js"></script>
 </body>
 
 </html>

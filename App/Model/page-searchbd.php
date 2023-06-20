@@ -24,7 +24,7 @@ if (isset($_POST['search']) && $_POST['search'] == 'obra') {
 
 
     $data = $classLog->findAll(['ID_obra, foto_obra, nome_obra, descricao, user_FK'], 'obra', 
-        [" WHERE nome_obra LIKE '%".$searchTerm."%' $notIn[0] LIMIT $limit"]);
+        [" WHERE nome_obra LIKE '%".$searchTerm."%' $notIn[0] ORDER BY ID_obra DESC LIMIT $limit"]);
 
     $dataCount = $classLog->Count('ID_obra', 'obra', 
         [" nome_obra LIKE '%".$searchTerm."%' "]);
@@ -39,14 +39,17 @@ if (isset($_POST['search']) && $_POST['search'] == 'obra') {
         $autorObra = $classLog->find(['nome'], 'usuario', 
             [" WHERE ID_user = $ID_user LIMIT 1"]);
 
-        $imgObra = $classLog->ifProfileImgExist($value['foto_obra'], null);
+        $imgObra = $classLog->getObraImg($value['foto_obra']);
+
+        $categoria_obra = $classLog->categoria_obra($value['ID_obra']);
         
         $search = array();
         $search['idObra'] = $value['ID_obra'];
         $search['nomeObra'] = $value['nome_obra'];
         $search['autorObra'] = $autorObra['nome'];
-        $search['imgObra'] = $imgObra->imgUser;
+        $search['imgObra'] = $imgObra;
         $search['descObra'] = $value['descricao'];
+        $search['categoria'] = $categoria_obra;
         $result[] = $search;
     }
 

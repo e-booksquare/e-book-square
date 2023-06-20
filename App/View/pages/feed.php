@@ -146,7 +146,7 @@ include_once '../../Model/verificacao.php';
                                     <div class="bodyPub">
                                         <div class="obraPub">
                                             <img class="fotoUserObra" src="
-                                                <?=$classLog->getObraImg($fotoUserObra);?>  ?>" alt="" width="150" height="230" style="border-radius: 5px;">
+                                                <?=$classLog->getObraImg($fotoUserObra);?> " alt="" width="150" height="230" style="border-radius: 5px;">
                                             <div class="infoObraPub">
                                                 <h2>
                                                     <?= $ObraCap['nome_obra']; ?>
