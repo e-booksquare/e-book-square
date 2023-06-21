@@ -244,7 +244,9 @@ if (!isset($_SESSION['ID_user']) || empty($_SESSION['ID_user'])) {
                             <p><span class="titulo_info">Nome: </span><span>${obra.nomeObra}</span></p>
                             <p><span class="titulo_info">Autor: </span><span>${obra.autorObra}</span></p>
                             <p><span class="titulo_info">Categoria: </span>
+                            <div style='display: flex; gap: 5px;'>
                                 ${getCategoriaDaObra(obra.categoria)}
+                            </div>
                             </p>
                             <p><span class="titulo_info">Descrição: </span><span style="word-break: break-word;">${obra.descObra}</span></p>
                         </div>

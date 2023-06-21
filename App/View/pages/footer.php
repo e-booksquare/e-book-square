@@ -16,9 +16,6 @@
   </div>
   <div class="footer_terceira_parte">
     <ul>
-      <li class="formatacao link_footer">
-        <a href="#">Diretrizes da comunidade</a>
-      </li>
     </ul>
   </div>
   <div class="footer_quarta_parte">

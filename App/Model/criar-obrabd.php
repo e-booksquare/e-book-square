@@ -131,11 +131,14 @@ function setInfoImg($imgUserBD){
         $foto = null;
         if(!empty($imgUserBD)){
             $foto = $imgUserBD;
-
-            if(isset($_POST['submit'])){
-                $foto = rand(1,12);
-            }
+        } else {
+            $foto = rand(1,12);
         }
+
+        if(isset($_POST['submit'])){
+            $foto = rand(1,12);
+        }
+
         return $foto;
     }
 }

@@ -123,9 +123,7 @@
                     <?php }?>
                 </div>
 
-            <div class="botao_opcoes Seguir" id="btn_seg_user">
-                    
-            </div>
+            <div class="botao_opcoes Seguir" id="btn_seg_user"></div>
             </div>
 
             <section class="conteudo_perfil">
@@ -536,6 +534,29 @@
             document.querySelector('body').style.overflowY = 'auto';
         }
         
+
+
+        $("#btn_seg_user").on("click", function () {
+
+var IDSeg = $("#idseguir").val();
+var segclick = "on";
+
+$.ajax({
+    url: `../../Model/seguidor_bd.php?action=renderSeg&userPerfil=${IDSeg}&segclick=${segclick}`,
+    success: (btn_seg_user) => $("#btn_seg_user").html(btn_seg_user)
+})
+})
+
+var IDSeg = $("#idseguir").val();
+
+// RENDERIZAR DADOS E HTML DO NÍVEL APÓS O CARREGAMENTO DA PÁGINA
+$.ajax({
+url: `../../Model/seguidor_bd.php?action=renderSeg&userPerfil=${IDSeg}`,
+success: (btn_seg_user) => $("#btn_seg_user").html(btn_seg_user)
+})
+
+
+
         $('.obraPerfil').on('click', function(){
 
         var ID_obra_fav = $(this).data('id');

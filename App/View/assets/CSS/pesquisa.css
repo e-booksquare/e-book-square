@@ -235,3 +235,8 @@ footer{
     margin-top: -274px;
 
 }
+
+#searchContent{
+    max-width: 1000px;
+    margin: 0 auto;
+}

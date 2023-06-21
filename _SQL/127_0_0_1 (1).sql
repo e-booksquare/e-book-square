@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20/06/2023 às 18:05
+-- Tempo de geração: 21/06/2023 às 19:39
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -42,11 +42,12 @@ CREATE TABLE `amei` (
 INSERT INTO `amei` (`ID_amei`, `user_FK`, `obra_FK`) VALUES
 (14, 37, 67),
 (15, 46, 67),
-(21, 46, 87),
 (39, 37, 81),
 (41, 41, 81),
 (43, 46, 81),
-(48, 41, 67);
+(48, 41, 67),
+(50, 37, 135),
+(51, 46, 135);
 
 -- --------------------------------------------------------
 
@@ -91,9 +92,6 @@ INSERT INTO `capitulo` (`ID_capitulo`, `titulo_cap`, `obra_FK`, `conteudo`, `res
 (54, 'Capítulo 1', 81, 'No vilarejo pacífico de Greenfield, um jovem chamado Lucas descobriu uma antiga profecia que o ligava a uma misteriosa joia...', 0, '2023-06-20 01:36:05', '2023-06-20 04:36:05', 1),
 (55, 'Capítulo 2', 81, 'Ao lado de seus leais amigos, Lucas embarcou em uma jornada épica para encontrar as outras peças da joia e desvendar o seu verdadeiro poder...', 0, '2023-06-20 01:36:05', '2023-06-20 04:36:05', 1),
 (56, 'Capítulo 3', 81, 'No caminho, eles enfrentaram criaturas sombrias, resolveram enigmas e aprenderam valiosas lições de amizade e coragem...', 0, '2023-06-20 01:36:05', '2023-06-20 04:36:05', 1),
-(57, 'Capítulo 1', 87, 'Em uma pequena cidade chamada Harmonyville, um grupo de jovens músicos formou uma banda com o sonho de alcançar o estrelato...', 0, '2023-06-20 01:36:05', '2023-06-20 04:36:05', 1),
-(58, 'Capítulo 2', 87, 'Conforme a banda se tornava popular, eles enfrentaram desafios, rivalidades e descobriram o verdadeiro significado da música...', 0, '2023-06-20 01:36:05', '2023-06-20 04:36:05', 1),
-(59, 'Capítulo 3', 87, 'Com suas canções cativantes e performances energéticas, a banda conquistou o coração do público e escreveu seu nome na história da música...', 0, '2023-06-20 01:36:05', '2023-06-20 04:36:05', 1),
 (60, 'Capítulo 1', 93, 'Era uma vez, em um mundo de fantasia, um jovem herói chamado Alex. Ele possuía um poder mágico único e uma missão grandiosa...', 0, '2023-06-20 01:36:05', '2023-06-20 04:36:05', 1),
 (61, 'Capítulo 2', 93, 'Alex enfrentou criaturas malignas, desafiou perigosos labirintos e encontrou aliados improváveis em sua jornada para salvar o reino...', 0, '2023-06-20 01:36:05', '2023-06-20 04:36:05', 1),
 (62, 'Capítulo 3', 93, 'Com bravura e determinação, Alex se tornou uma lenda, cumprindo sua missão e trazendo paz e harmonia de volta ao mundo...', 0, '2023-06-20 01:36:05', '2023-06-20 04:36:05', 1),
@@ -113,19 +111,17 @@ INSERT INTO `capitulo` (`ID_capitulo`, `titulo_cap`, `obra_FK`, `conteudo`, `res
 (97, 'À Beira do Colapso', 99, 'O mundo está à beira do colapso e os protagonistas enfrentam desafios inimagináveis neste capítulo de alta tensão.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
 (98, 'O Renascimento da Esperança', 100, 'Neste capítulo emocionante, a esperança renasce das cinzas enquanto os personagens lutam para reverter os eventos devastadores.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
 (99, 'O Legado Perdido', 101, 'Um legado misterioso é descoberto, revelando segredos que desafiam as noções dos personagens sobre sua própria história.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
-(100, 'À Sombra da Traição', 102, 'A sombra da traição paira sobre os protagonistas neste capítulo repleto de reviravoltas e revelações surpreendentes.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
-(101, 'A Promessa Cumprida', 103, 'Uma promessa antiga é finalmente cumprida neste capítulo comovente, trazendo resolução e redenção aos personagens.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
 (102, 'O Despertar da Escuridão', 105, 'Uma força sinistra desperta neste capítulo sombrio, ameaçando mergulhar o mundo em trevas eternas.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
 (103, 'O Destino em Jogo', 105, 'Com o destino do reino em jogo, Alexander e seus companheiros enfrentam o Dragão de Fogo em uma batalha épica. Eles terão que mostrar coragem, lealdade e sacrifício para derrotar a criatura e trazer a paz de volta ao reino.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
 (104, 'O Mistério Profundo', 106, 'Neste capítulo enigmático, os protagonistas mergulham em um mistério profundo que os levará a lugares obscuros e desconhecidos.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
 (105, 'O Despertar dos Antigos', 107, 'Antigos seres despertam de seu sono milenar, trazendo consigo uma ameaça avassaladora neste capítulo cheio de suspense.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
-(106, 'O Caminho da Redenção', 108, 'Os personagens enfrentam seu passado sombrio e trilham o difícil caminho da redenção neste capítulo emocionante.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
 (107, 'A Última Batalha', 109, 'A última batalha se aproxima, e os protagonistas se preparam para enfrentar seu maior desafio neste capítulo carregado de tensão e emoção.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
 (108, 'O Segredo Revelado', 110, 'Neste capítulo revelador, os segredos mais obscuros vêm à tona, mudando para sempre a vida dos personagens.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
 (109, 'O Despertar da Magia', 111, 'A magia ancestral desperta neste capítulo mágico, trazendo consigo poderes inimagináveis e desafios surpreendentes.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
-(110, 'O Julgamento Final', 112, 'No capítulo final emocionante, os protagonistas enfrentam o julgamento final, onde suas escolhas determinarão o destino do mundo.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
-(111, 'Entre Dois Mundos', 113, 'Os personagens se encontram divididos entre dois mundos, lutando para encontrar seu lugar neste capítulo cheio de conflitos internos.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
-(112, 'A Jornada Interminável', 114, 'A jornada dos protagonistas parece não ter fim, levando-os a lugares desconhecidos e desafiadores neste capítulo de aventura constante.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1);
+(112, 'A Jornada Interminável', 114, 'A jornada dos protagonistas parece não ter fim, levando-os a lugares desconhecidos e desafiadores neste capítulo de aventura constante.', 0, '2023-06-20 02:02:13', '2023-06-20 05:02:13', 1),
+(119, 'A regress&atilde;o (One shot)', 130, '<p>Era uma vez uma jovem chamada Sofia que sofria de estranhas e inexplic&aacute;veis mem&oacute;rias de uma vida passada. Sempre que ela se deparava com certos lugares ou objetos, sentimentos intensos de familiaridade a dominavam. Determinada a desvendar o mist&eacute;rio, Sofia come&ccedil;ou uma jornada de regress&atilde;o, buscando ajuda de um terapeuta especializado. Atrav&eacute;s das sess&otilde;es, ela foi transportada para diferentes per&iacute;odos hist&oacute;ricos, vivendo momentos de alegria, tristeza e aventura em vidas que pareciam distantes. Aos poucos, Sofia percebeu que as pessoas que encontrava nas regress&otilde;es tamb&eacute;m existiam em sua vida atual, refor&ccedil;ando ainda mais os la&ccedil;os entre suas exist&ecirc;ncias passadas e presentes. Com coragem e determina&ccedil;&atilde;o, ela desvendou segredos antigos e encontrou uma nova compreens&atilde;o de si mesma, aceitando seu passado e abra&ccedil;ando o presente com gratid&atilde;o e sabedoria.</p>\r\n', 0, '2023-06-20 21:45:49', '2023-06-21 00:45:49', 1),
+(120, ' Cap&iacute;tulo 1', 131, '<p>Era uma vez uma jovem chamada Sofia que sofria de estranhas e inexplic&aacute;veis mem&oacute;rias de uma vida passada. Sempre que ela se deparava com certos lugares ou objetos, sentimentos intensos de familiaridade a dominavam. Determinada a desvendar o mist&eacute;rio, Sofia come&ccedil;ou uma jornada de regress&atilde;o, buscando ajuda de um terapeuta especializado. Atrav&eacute;s das sess&otilde;es, ela foi transportada para diferentes per&iacute;odos hist&oacute;ricos, vivendo momentos de alegria, tristeza e aventura em vidas que pareciam distantes. Aos poucos, Sofia percebeu que as pessoas que encontrava nas regress&otilde;es tamb&eacute;m existiam em sua vida atual, refor&ccedil;ando ainda mais os la&ccedil;os entre suas exist&ecirc;ncias passadas e presentes. Com coragem e determina&ccedil;&atilde;o, ela desvendou segredos antigos e encontrou uma nova compreens&atilde;o de si mesma, aceitando seu passado e abra&ccedil;ando o presente com gratid&atilde;o e sabedoria.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n', 0, '2023-06-20 21:53:10', '2023-06-21 00:53:10', 1),
+(122, 'Do &Eacute;pico ao Viral: A Origem dos Memes', 135, '<p>Os memes, em sua ess&ecirc;ncia, s&atilde;o uma forma de comunica&ccedil;&atilde;o viral na era digital, que combinam imagens, v&iacute;deos, frases e refer&ecirc;ncias culturais para transmitir ideias e gerar risadas. Embora pare&ccedil;am uma inven&ccedil;&atilde;o recente, a verdade &eacute; que os memes t&ecirc;m ra&iacute;zes profundas na hist&oacute;ria da humanidade. Desde os tempos antigos, as pessoas compartilhavam hist&oacute;rias e piadas engra&ccedil;adas por meio de desenhos, textos escritos e at&eacute; mesmo em pinturas nas cavernas. No entanto, com o surgimento da internet e das redes sociais, os memes ganharam uma nova forma de propaga&ccedil;&atilde;o e alcan&ccedil;aram uma popularidade massiva.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>O boom dos memes aconteceu na d&eacute;cada de 2000, com a populariza&ccedil;&atilde;o dos f&oacute;runs online e das plataformas de compartilhamento de conte&uacute;do. Foi nessa &eacute;poca que os primeiros memes virais come&ccedil;aram a surgir, conquistando a aten&ccedil;&atilde;o do p&uacute;blico e se espalhando rapidamente pela internet. A combina&ccedil;&atilde;o de imagens ic&ocirc;nicas, como o &quot;Rage Guy&quot; e o &quot;Forever Alone&quot;, com legendas engra&ccedil;adas e situa&ccedil;&otilde;es absurdas, conquistou milh&otilde;es de pessoas ao redor do mundo. &Agrave; medida que as redes sociais evolu&iacute;ram, os memes se tornaram ainda mais presentes no dia a dia das pessoas, com os usu&aacute;rios adaptando e remixando as imagens e conceitos originais para criar novos memes e piadas instantaneamente reconhec&iacute;veis. Assim, os memes se tornaram uma linguagem pr&oacute;pria, que transcende fronteiras culturais e proporciona uma forma &uacute;nica de comunica&ccedil;&atilde;o e entretenimento na era digital.</p>\r\n', 0, '2023-06-21 12:49:09', '2023-06-21 15:49:09', 1);
 
 -- --------------------------------------------------------
 
@@ -221,12 +217,12 @@ CREATE TABLE `categoria_da_obra` (
 --
 
 INSERT INTO `categoria_da_obra` (`IDCatObr`, `IDObraFK`, `IDCatFK`) VALUES
-(135, 67, 2),
-(136, 67, 5),
-(131, 67, 7),
-(132, 67, 34),
-(133, 67, 39),
-(134, 67, 61),
+(388, 67, 2),
+(389, 67, 5),
+(390, 67, 7),
+(391, 67, 34),
+(392, 67, 39),
+(393, 67, 61),
 (156, 81, 3),
 (154, 81, 4),
 (155, 81, 8),
@@ -234,46 +230,50 @@ INSERT INTO `categoria_da_obra` (`IDCatObr`, `IDObraFK`, `IDCatFK`) VALUES
 (159, 81, 28),
 (158, 81, 49),
 (157, 81, 61),
-(180, 87, 4),
-(175, 87, 5),
-(179, 87, 8),
-(174, 87, 15),
-(177, 87, 28),
-(176, 87, 32),
-(178, 87, 35),
 (238, 93, 13),
 (239, 93, 22),
 (240, 93, 29),
-(301, 94, 2),
-(302, 94, 2),
-(303, 94, 7),
-(304, 95, 3),
-(305, 95, 13),
-(306, 95, 19),
+(406, 94, 2),
+(407, 94, 7),
+(401, 95, 3),
+(402, 95, 13),
+(403, 95, 19),
 (307, 96, 4),
 (308, 96, 5),
 (309, 96, 15),
-(310, 97, 6),
-(311, 97, 10),
-(312, 97, 31),
-(313, 98, 2),
-(314, 98, 2),
-(315, 98, 13),
-(316, 99, 4),
-(317, 99, 5),
-(318, 99, 27),
+(375, 97, 6),
+(376, 97, 10),
+(377, 97, 31),
+(373, 98, 2),
+(374, 98, 13),
+(370, 99, 4),
+(371, 99, 5),
+(372, 99, 27),
 (319, 100, 8),
 (320, 100, 14),
 (321, 100, 19),
 (322, 101, 4),
 (323, 101, 13),
 (324, 101, 19),
-(325, 102, 9),
-(326, 102, 14),
-(327, 102, 33),
-(328, 103, 5),
-(329, 103, 20),
-(330, 103, 28);
+(367, 107, 16),
+(368, 107, 19),
+(369, 107, 20),
+(400, 110, 16),
+(399, 110, 19),
+(359, 115, 2),
+(398, 120, 5),
+(396, 125, 14),
+(397, 125, 19),
+(380, 130, 15),
+(381, 130, 20),
+(418, 131, 19),
+(414, 134, 2),
+(415, 134, 3),
+(416, 134, 14),
+(417, 134, 41),
+(419, 135, 6),
+(421, 135, 39),
+(420, 135, 55);
 
 -- --------------------------------------------------------
 
@@ -321,7 +321,10 @@ INSERT INTO `comentario` (`ID_comentario`, `user_FK`, `destinatario_FK`, `conteu
 (87, 46, 29, 'Tu usaste a pr&oacute;pria conta do pr&oacute;prio autor da obra para fazer teste de com se fosse um usu&aacute;rio qualquer passando spoiler por um coment&aacute;rio... Lastim&aacute;vel seu QI 🙄', 6, '2023-05-25 16:05:22', 86, 0),
 (97, 37, 29, 'vdd, o animal n&atilde;o sabe nem mesmo apertar o btn de spoiler, vamo denunciar ele. J&aacute; me fudi lendo isso. O prota morrer foi de fude', 6, '2023-05-25 16:17:20', 86, 1),
 (98, 41, 29, 'kkkkkkkkkkk mds🤣', 6, '2023-05-25 16:20:03', 86, 0),
-(100, 41, 29, 'chala head chala', 5, '2023-05-25 16:35:58', 50, 0);
+(100, 41, 29, 'chala head chala', 5, '2023-05-25 16:35:58', 50, 0),
+(103, 69, 29, 'Ol&aacute;\n', 5, '2023-06-20 21:13:39', 64, 0),
+(105, 46, 37, 'mais please 😉👀', 5, '2023-06-21 12:58:46', 122, 0),
+(106, 69, 37, 'mas foi depois disso kkk', 5, '2023-06-21 13:09:44', 105, 0);
 
 -- --------------------------------------------------------
 
@@ -358,12 +361,16 @@ CREATE TABLE `favorito` (
 INSERT INTO `favorito` (`IDFav`, `user_FK`, `obra_FK`) VALUES
 (112, 29, 67),
 (105, 29, 93),
+(117, 29, 95),
+(116, 29, 96),
+(115, 29, 131),
+(114, 29, 134),
 (90, 37, 67),
 (104, 37, 81),
-(100, 37, 87),
+(118, 37, 135),
 (91, 41, 81),
 (7, 46, 67),
-(102, 46, 87);
+(113, 69, 115);
 
 -- --------------------------------------------------------
 
@@ -393,7 +400,10 @@ INSERT INTO `likes` (`ID_like`, `ID_tipo`, `tipo`, `feedback`, `destinatario_FK`
 (247, 49, 3, 1, 37, 46),
 (248, 13, 3, 1, 29, 29),
 (249, 39, 3, 1, 37, 29),
-(250, 13, 3, 1, 29, 37);
+(250, 13, 3, 1, 29, 37),
+(253, 122, 3, 1, 37, 37),
+(254, 122, 3, 1, 37, 46),
+(255, 105, 3, 1, 37, 69);
 
 -- --------------------------------------------------------
 
@@ -406,6 +416,7 @@ CREATE TABLE `messages` (
   `incoming_msg_id` int(255) NOT NULL,
   `outgoing_msg_id` int(255) NOT NULL,
   `msg` varchar(1000) NOT NULL,
+  `view` tinyint(1) NOT NULL DEFAULT 0,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -413,13 +424,17 @@ CREATE TABLE `messages` (
 -- Despejando dados para a tabela `messages`
 --
 
-INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `msg`, `created_at`) VALUES
-(1, 37, 41, 'conversa n°1', '2023-06-04 21:40:20'),
-(2, 29, 37, 'covrs n°2', '2023-06-04 21:40:20'),
-(4, 37, 41, 'cvrs', '2023-06-04 21:40:20'),
-(5, 41, 37, 'cvrs 5', '2023-06-04 21:40:20'),
-(6, 29, 37, 'cvrs n 6', '2023-06-04 21:40:20'),
-(7, 37, 41, 'fala meu caro, roubaram minha vó e estão pedindo dinheiro, acha que a validade dela sobressai o custo do reenvestimento?', '2023-06-05 16:47:31');
+INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `msg`, `view`, `created_at`) VALUES
+(1, 37, 41, 'conversa n°1', 1, '2023-06-21 17:04:15'),
+(2, 29, 37, 'covrs n°2', 0, '2023-06-04 21:40:20'),
+(4, 37, 41, 'cvrs', 1, '2023-06-21 17:04:15'),
+(5, 41, 37, 'cvrs 5', 0, '2023-06-04 21:40:20'),
+(6, 29, 37, 'cvrs n 6', 0, '2023-06-04 21:40:20'),
+(7, 37, 41, 'fala meu caro, roubaram minha vó e estão pedindo dinheiro, acha que a validade dela sobressai o custo do reenvestimento?', 1, '2023-06-21 17:04:15'),
+(8, 29, 37, 'chaama', 0, '2023-06-21 17:04:01'),
+(9, 46, 37, 'eai', 1, '2023-06-21 17:29:19'),
+(10, 69, 37, 'calvo', 0, '2023-06-21 17:05:56'),
+(11, 37, 46, 'oi :)', 0, '2023-06-21 17:29:29');
 
 -- --------------------------------------------------------
 
@@ -446,14 +461,15 @@ CREATE TABLE `notificacao` (
 --
 
 INSERT INTO `notificacao` (`IDNOT`, `conta_obra`, `tipoNOT`, `nomeNOT`, `fotoNOT`, `conteudoNOT`, `URLNOT`, `dataNOT`, `activeNOT`, `destinatario_FKNOT`, `user_FKNOT`) VALUES
-(34, 1, 10, 'Anna Carrey', 'fdbcd0af33da1469a538b1eea995c86eAll-Good-Things-A-Hope-In-Hell-_online-video-cutter.com_.gif', ' curtiu o capítulo \'A Comedy Conversation Bet...\' na obra \'The Crazy School\'', 'perfil.php?user=46', '2023-05-22 15:23:08', 0, 37, 46),
-(35, 1, 9, 'Katsurazur4', 'a72570cc71f7e91dfb77a253c11888c3profilegin.jpg', ' publicou uma nova obra, \'G.O.T\', seja um dos primeiros a lerem !!', 'capa_da_obra.php?obra=93', '2023-05-23 16:49:33', 0, 29, 37),
-(36, 1, 9, 'Katsurazur4', 'a72570cc71f7e91dfb77a253c11888c3profilegin.jpg', ' publicou uma nova obra, \'G.O.T\', seja um dos primeiros a lerem !!', 'capa_da_obra.php?obra=93', '2023-05-23 16:49:33', 0, 41, 37),
-(37, 1, 9, 'Katsurazur4', 'a72570cc71f7e91dfb77a253c11888c3profilegin.jpg', ' publicou uma nova obra, \'G.O.T\', seja um dos primeiros a lerem !!', 'capa_da_obra.php?obra=93', '2023-05-23 16:49:33', 0, 46, 37),
-(38, 0, 8, 'Anna Carrey', 'fdbcd0af33da1469a538b1eea995c86eAll-Good-Things-A-Hope-In-Hell-_online-video-cutter.com_.gif', ' começou a te seguir', 'perfil.php?user=46', '2023-05-24 16:25:21', 0, 29, 46),
 (39, 1, 10, 'Ratsel', 'b0119412b863f297fe9c66eff8c1f957bannergifwpp.gif', ' curtiu o capítulo \' Cap&iacute;tulo 1\' na obra \'Sahovi\'', 'perfil.php?user=29', '2023-05-25 07:07:07', 0, 37, 29),
-(40, 1, 10, 'Katsurazur4', 'a72570cc71f7e91dfb77a253c11888c3profilegin.jpg', ' curtiu o capítulo \' Andr&ocirc;meda\' na obra \'Volcanic return\'', 'perfil.php?user=37', '2023-05-25 16:18:23', 1, 29, 37),
-(41, 1, 9, 'Mohamed', '8f58be70c3cc49d37d028e6ff74746eesamurai-4836642_1920.jpg', ' amou sua obra em \'Volcanic return\'', 'perfil.php?user=41', '2023-05-25 17:08:19', 1, 29, 41);
+(55, 1, 9, 'Ratsel', 'ad5968dc8f2e700fa2ab4cea37dbb4a7urahara2.jpg', ' publicou uma nova obra, \'A Herdeira das Sombras\', seja um dos primeiros a lerem !!', 'capa_da_obra.php?obra=134', '2023-06-21 12:29:37', 1, 41, 29),
+(56, 1, 9, 'Ratsel', 'ad5968dc8f2e700fa2ab4cea37dbb4a7urahara2.jpg', ' publicou uma nova obra, \'A Herdeira das Sombras\', seja um dos primeiros a lerem !!', 'capa_da_obra.php?obra=134', '2023-06-21 12:29:37', 1, 37, 29),
+(61, 1, 9, 'Anna Carrey', 'dcb27b7e5057c704f36f3278536b1c07imganecrry.jpg', ' amou sua obra em \'A arte dos memes\'', 'perfil.php?user=46', '2023-06-21 12:57:53', 1, 37, 46),
+(62, 1, 10, 'Anna Carrey', 'dcb27b7e5057c704f36f3278536b1c07imganecrry.jpg', ' curtiu o capítulo \'Do &Eacute;pico ao Viral:...\' na obra \'A arte dos memes\'', 'perfil.php?user=46', '2023-06-21 12:57:58', 1, 37, 46),
+(64, 0, 8, 'Felipe', '60344ef01d16398693101775197b303acafé.jpg', ' começou a te seguir', 'perfil.php?user=69', '2023-06-21 13:08:26', 1, 37, 69),
+(65, 1, 10, 'Felipe', '60344ef01d16398693101775197b303acafé.jpg', ' curtiu o capítulo \'O Despertar dos Antigos\' na obra \'A Heran&ccedil;a Perdida\'', 'perfil.php?user=69', '2023-06-21 13:08:48', 1, 37, 69),
+(67, 1, 9, 'Katsurazur4', '4d827bf32a2a9add1524771db6506ba9WhatsApp_Image_2023-06-21_at_12.38.40_PM.jpeg', ' publicou uma nova obra, \'rr23r23r2\', seja um dos primeiros a lerem !!', 'capa_da_obra.php?obra=136', '2023-06-21 13:55:55', 1, 41, 37),
+(69, 1, 9, 'Katsurazur4', '4d827bf32a2a9add1524771db6506ba9WhatsApp_Image_2023-06-21_at_12.38.40_PM.jpeg', ' publicou uma nova obra, \'rr23r23r2\', seja um dos primeiros a lerem !!', 'capa_da_obra.php?obra=136', '2023-06-21 13:55:55', 1, 69, 37);
 
 -- --------------------------------------------------------
 
@@ -479,41 +495,38 @@ CREATE TABLE `obra` (
 --
 
 INSERT INTO `obra` (`ID_obra`, `nome_obra`, `user_FK`, `descricao`, `etaria`, `created_at`, `foto_obra`, `updated_at`, `publicado`, `Finalizado`) VALUES
-(67, 'Volcanic return', 29, 'Inside an active volcano is a chamber in which molten rock, called magma, collects. Pressure builds up inside the magma chamber, causing the magma to move through channels in the rock and escape onto the planet&rsquo;s surface. Once it flows onto the surface the magma is known as lava.', 'Adulto', '2023-04-02 19:31:33', '', '2023-06-20 15:59:42', 1, 0),
+(67, 'Volcanic return', 29, 'Inside an active volcano is a chamber in which molten rock, called magma, collects. Pressure builds up inside the magma chamber, causing the magma to move through channels in the rock and escape onto the planet&rsquo;s surface. Once it flows onto the surface the magma is known as lava.', '', '2023-04-02 19:31:33', 'a7893b2745e0c2c9c28b477b8bc1e73alandscape3.jpg', '2023-06-21 00:51:42', 1, 0),
 (81, 'Sahovi', 37, 'Um mercen&aacute;rio com um forte trauma do passado quer se vingar, mas muitos coisas o impedem.', 'Adulto', '2023-05-06 05:16:04', '', '2023-06-20 15:59:42', 1, 0),
-(87, 'A Jornada de Okalhity: Imortalidade al&eacute;m dos S&eacute;culos', 46, '\r\nH&aacute; muito tempo, em uma terra repleta de lendas e mist&eacute;rios, vivia um personagem extraordin&aacute;rio chamado Okalhity. Ele era &uacute;nico, dotado de uma d&aacute;diva especial que o tornava imortal e eterno. Desde o princ&iacute;pio dos tempos, Okalhity vagava pela terra, testemunhando o nascimento e a queda de imp&eacute;rios, a ascens&atilde;o e a extin&ccedil;&atilde;o de civiliza&ccedil;&otilde;es.\r\n\r\nOkalhity tinha uma apar&ecirc;ncia jovem e vigorosa, mas seus olhos carregavam a sabedoria acumulada ao longo dos s&eacute;culos. Ele presenciou eventos que mudaram o curso da hist&oacute;ria, atravessando guerras e revolu&ccedil;&otilde;es, experimentando a alegria e a tristeza dos seres humanos. Ele era um observador silencioso, um guardi&atilde;o dos segredos do passado.\r\n\r\nEm sua busca pela compreens&atilde;o do mundo e da exist&ecirc;ncia humana, Okalhity dedicou-se &agrave; aprendizagem constante. Ele estudou as artes, ci&ecirc;ncias e filosofia, mergulhando profundamente na busca pelo conhecimento. Com o tempo, ele dominou v&aacute;rias l&iacute;nguas e acumulou um vasto acervo de hist&oacute;rias e mitos.\r\n\r\nEntretanto, a imortalidade de Okalhity trouxe consigo um fardo pesado. Enquanto testemunhava o ciclo constante de vida e morte, ele enfrentou a solid&atilde;o e a perda. Ele viu seus entes queridos envelhecerem e partiram, enquanto ele permanecia inalterado. A conex&atilde;o com outros seres humanos tornou-se fugaz e ef&ecirc;mera.\r\n\r\nCansado d', 'Adulto', '2023-05-16 16:41:56', '', '2023-06-20 15:59:42', 1, 0),
 (93, 'G.O.T', 37, 'Desdes o fim dos tempos, um ser bla bla bla', 'Adulto', '2023-05-23 16:49:32', '', '2023-06-20 15:59:42', 1, 0),
-(94, 'O Segredo das Sombras', 29, 'Uma história de suspense e mistério que envolve um detetive em busca da verdade', 'Adulto', '2023-06-19 23:47:54', '', '2023-06-20 02:49:18', 1, 0),
-(95, 'A Magia Proibida', 29, 'Uma aventura fantástica em um mundo repleto de magia e perigos', 'Adulto', '2023-06-19 23:47:54', '', '2023-06-20 02:49:17', 1, 0),
+(94, 'O Segredo das Sombras', 29, 'Uma hist&oacute;ria de suspense e mist&eacute;rio que envolve um detetive em busca da verdade', '', '2023-06-19 23:47:54', 'd95e2201b9db6316a06f0f806809f401cigarro_na_mesa.jpg', '2023-06-21 00:56:48', 1, 0),
+(95, 'A Magia Proibida', 29, 'Uma aventura fant&aacute;stica em um mundo repleto de magia e perigos', '', '2023-06-19 23:47:54', '7838ad861a1a69fc9cf28813f5cbd557gato_no_muro.jpg', '2023-06-21 00:55:14', 1, 0),
 (96, 'O Mistério do Passado', 29, 'Um drama policial que revela segredos sombrios de personagens enigmáticos', 'Adulto', '2023-06-19 23:47:54', '', '2023-06-20 02:49:15', 1, 0),
-(97, 'A Jornada Épica', 37, 'Uma aventura emocionante repleta de ação e batalhas épicas', 'Adulto', '2023-06-19 23:47:54', '', '2023-06-20 02:49:13', 1, 0),
-(98, 'O Legado Perdido', 37, 'Uma história de fantasia que segue a jornada de heróis em busca de artefatos místicos', 'Adulto', '2023-06-19 23:47:54', '', '2023-06-20 02:49:06', 1, 0),
-(99, 'A Última Esperança', 37, 'Um conto pós-apocalíptico sobre a luta pela sobrevivência da humanidade', 'Adulto', '2023-06-19 23:47:54', '', '2023-06-20 02:49:04', 1, 0),
+(97, 'A Jornada &Eacute;pica', 37, 'Uma aventura emocionante repleta de a&ccedil;&atilde;o e batalhas &eacute;picas', '', '2023-06-19 23:47:54', 'e70aaf9cef025eafd2d36ece4a25f961farol.jpg', '2023-06-21 00:42:21', 1, 0),
+(98, 'O Legado Perdido', 37, 'Uma hist&oacute;ria de fantasia que segue a jornada de her&oacute;is em busca de artefatos m&iacute;sticos', '', '2023-06-19 23:47:54', 'cbbc989fb2cd193095a321ad0ae2916bduans.jpg', '2023-06-21 00:42:06', 1, 0),
+(99, 'A &Uacute;ltima Esperan&ccedil;a', 37, 'Um conto p&oacute;s-apocal&iacute;ptico sobre a luta pela sobreviv&ecirc;ncia da humanidade', '', '2023-06-19 23:47:54', '90afc47100090621d1e44fc6ff6235cacowboy.jpg', '2023-06-21 00:41:45', 1, 0),
 (100, 'O Poder das Estrelas', 41, 'Uma obra de ficção científica que explora as maravilhas do espaço sideral', 'Adulto', '2023-06-19 23:47:54', '', '2023-06-20 02:49:00', 1, 0),
 (101, 'O Segredo das Runas', 41, 'Uma aventura histórica que revela os mistérios da antiga civilização', 'Adulto', '2023-06-19 23:47:54', '', '2023-06-20 02:48:56', 1, 0),
-(102, 'O Portal Mágico', 44, 'Uma fantasia encantadora que transporta os leitores para um mundo mágico', 'Adulto', '2023-06-19 23:47:54', '', '2023-06-20 02:48:48', 1, 0),
-(103, 'O Mistério do Enigma', 44, 'Um suspense intrigante que desafia os personagens a desvendarem um enigma mortal', 'Adulto', '2023-06-19 23:47:54', '', '2023-06-20 02:48:44', 1, 0),
 (105, 'Sombras do Passado', 69, 'Em uma cidade sombria e assolada pelo crime, um detetive obstinado chamado Jack Thompson investiga uma série de assassinatos brutais que parecem estar conectados a eventos traumáticos de seu próprio passado. À medida que ele mergulha cada vez mais na escuridão, segredos perturbadores vêm à tona, desafiando sua sanidade e colocando sua vida em perigo.', 'Adulto', '2023-06-20 01:41:12', '', '2023-06-20 04:41:12', 1, 0),
 (106, 'O Domínio das Trevas', 46, 'Uma história sombria de horror que explora os limites da mente humana', 'Adulto', '2023-06-20 01:52:39', '', '2023-06-20 04:52:39', 1, 0),
-(107, 'A Herança Perdida', 37, 'Um mistério familiar cheio de segredos e reviravoltas inesperadas', 'Adulto', '2023-06-20 01:52:39', '', '2023-06-20 04:52:39', 1, 0),
-(108, 'A Lenda do Herói', 44, 'Uma jornada épica de um herói destinado a salvar o mundo da destruição', 'Adulto', '2023-06-20 01:52:39', '', '2023-06-20 04:52:39', 1, 0),
-(109, 'O Segredo do Amuleto', 37, 'Um objeto místico que concede poderes incríveis, mas a um custo terrível', 'Adulto', '2023-06-20 01:52:39', '', '2023-06-20 04:52:39', 1, 0),
-(110, 'A Trama Sinistra', 29, 'Uma conspiração sombria que ameaça a paz e a estabilidade do mundo', 'Adulto', '2023-06-20 01:52:39', '', '2023-06-20 04:52:39', 1, 0),
+(107, 'A Heran&ccedil;a Perdida', 37, 'Um mist&eacute;rio familiar cheio de segredos e reviravoltas inesperadas', '', '2023-06-20 01:52:39', 'c923bb62ac400bc2c328c72724ee4e25car.jpg', '2023-06-21 00:41:02', 1, 0),
+(109, 'O Segredo do Amuleto', 37, 'Um objeto m&iacute;stico que concede poderes incr&iacute;veis, mas a um custo terr&iacute;vel', '', '2023-06-20 01:52:39', '18812a0a8fe3e075a1ae36a6cf62021abusoal.jpg', '2023-06-21 00:38:14', 1, 0),
+(110, 'A Trama Sinistra', 29, 'Uma conspira&ccedil;&atilde;o sombria que amea&ccedil;a a paz e a estabilidade do mundo', '', '2023-06-20 01:52:39', '0a51c6a0d4d01a8d0c20638ce3c7b53clandscape3.jpg', '2023-06-21 00:55:00', 1, 0),
 (111, 'O Mistério do Manuscrito', 69, 'Um manuscrito antigo que guarda segredos ocultos e perigosos', 'Adulto', '2023-06-20 01:52:39', '', '2023-06-20 04:52:39', 1, 0),
-(112, 'A Profecia Esquecida', 44, 'Uma profecia antiga que se torna realidade, desencadeando uma série de eventos catastróficos', 'Adulto', '2023-06-20 01:52:39', '', '2023-06-20 04:52:39', 1, 0),
-(113, 'O Enigma do Labirinto', 44, 'Um labirinto mortal cheio de armadilhas e desafios mortais', 'Adulto', '2023-06-20 01:52:39', '', '2023-06-20 04:52:39', 1, 0),
 (114, 'A Busca pelo Tesouro', 69, 'Uma emocionante caçada ao tesouro perdido que testará a coragem dos aventureiros', 'Adulto', '2023-06-20 01:52:39', '', '2023-06-20 04:52:39', 1, 0),
-(115, 'O Despertar das Feras', 69, 'Criaturas ancestrais despertam e ameaçam a existência da humanidade', 'Adulto', '2023-06-20 01:52:39', '', '2023-06-20 04:52:39', 1, 0),
+(115, 'O Despertar das Feras', 69, 'Criaturas ancestrais despertam e amea&ccedil;am a exist&ecirc;ncia da humanidade', '', '2023-06-20 01:52:39', '07f814a49ce67853f999134b98b17c97transferir.jpg', '2023-06-21 00:01:48', 1, 0),
 (116, 'A Queda das Estrelas', 29, 'Um império galáctico entra em colapso e desencadeia uma guerra interplanetária', 'Adulto', '2023-06-20 01:54:07', '', '2023-06-20 04:54:07', 1, 0),
 (117, 'A Maldição do Espelho', 46, 'Um espelho amaldiçoado reflete os piores medos de quem o encara', 'Adulto', '2023-06-20 01:54:07', '', '2023-06-20 04:54:07', 1, 0),
 (118, 'O Legado Divino', 29, 'Deuses antigos retornam para reivindicar seu poder e influência sobre a humanidade', 'Adulto', '2023-06-20 01:54:07', '', '2023-06-20 04:54:07', 1, 0),
-(119, 'O Segredo das Ruínas', 37, 'Uma expedição arqueológica descobre um segredo oculto nas ruínas de uma civilização perdida', 'Adulto', '2023-06-20 01:54:07', '', '2023-06-20 04:54:07', 1, 0),
-(120, 'A Noite dos Pesadelos', 29, 'Criaturas sinistras e pesadelos aterrorizantes assombram uma cidade adormecida', 'Adulto', '2023-06-20 01:54:07', '', '2023-06-20 04:54:07', 1, 0),
+(119, 'O Segredo das Ru&iacute;nas', 37, 'Uma expedi&ccedil;&atilde;o arqueol&oacute;gica descobre um segredo oculto nas ru&iacute;nas de uma civiliza&ccedil;&atilde;o perdida', '', '2023-06-20 01:54:07', '312c6cd4215d754d610466914b2d85d1baleia.jpg', '2023-06-21 00:37:41', 1, 0),
+(120, 'A Noite dos Pesadelos', 29, 'Criaturas sinistras e pesadelos aterrorizantes assombram uma cidade adormecida', '', '2023-06-20 01:54:07', '8334d7d7911838c74ca6518f2da75527landscape.jpg', '2023-06-21 00:54:38', 1, 0),
 (121, 'A Busca pelo Conhecimento', 69, 'Um aprendiz busca conhecimentos proibidos em uma jornada perigosa e proibida', 'Adulto', '2023-06-20 01:54:07', '', '2023-06-20 04:54:07', 1, 0),
 (122, 'O Segredo das Profundezas', 69, 'Um segredo sombrio escondido nas profundezas do oceano ameaça a existência humana', 'Adulto', '2023-06-20 01:54:07', '', '2023-06-20 04:54:07', 1, 0),
-(123, 'A Profecia do Destino', 44, 'Uma profecia milenar guia o destino de um herói relutante em sua jornada épica', 'Adulto', '2023-06-20 01:54:07', '', '2023-06-20 04:54:07', 1, 0),
 (124, 'A Ordem dos Guardiões', 41, 'Uma sociedade secreta protege relíquias poderosas de cair nas mãos erradas', 'Adulto', '2023-06-20 01:54:07', '', '2023-06-20 04:54:07', 1, 0),
-(125, 'O Mistério do Portal', 29, 'Um portal mágico se abre, conectando dois mundos e desencadeando consequências imprevisíveis', 'Adulto', '2023-06-20 01:54:07', '', '2023-06-20 04:54:07', 1, 0);
+(125, 'O Mist&eacute;rio do Portal', 29, 'Um portal m&aacute;gico se abre, conectando dois mundos e desencadeando consequ&ecirc;ncias imprevis&iacute;veis', '', '2023-06-20 01:54:07', '7e7c133833814034352f13dd956bbdbahanburgher.jpg', '2023-06-21 00:54:14', 1, 0),
+(130, 'O grande regresso', 72, 'Uma hist&oacute;ria de regresso', '', '2023-06-20 21:44:37', 'e1a2d13eb4e2997fb6c92fa95575e350moon.jpg', '2023-06-21 00:46:07', 1, 0),
+(131, 'O perdido do cabelo de maicon', 29, 'Maicon, um jovem de dezoito anos, se depara com um desafio inesperado que tem afetado sua autoconfian&ccedil;a: a calv&iacute;cie precoce. Apesar de sua idade, ele j&aacute; notou a queda acentuada de cabelo, especialmente na regi&atilde;o frontal, o que o faz sentir-se preocupado e inseguro.', '', '2023-06-20 21:52:55', '662ad2bab98994be06f29347965b6dd1urahara.jpg', '2023-06-21 15:42:45', 1, 0),
+(134, 'A Herdeira das Sombras', 29, ' Uma exploradora destemida embarca em uma expedi&ccedil;&atilde;o para encontrar um reino lend&aacute;rio que desapareceu h&aacute; s&eacute;culos. Ela enfrenta criaturas m&iacute;sticas e perigos mortais enquanto desvenda os segredos do reino perdido.', '', '2023-06-21 12:29:37', '180aa35c0559827fdf12a66be11ae37esakura.jpg', '2023-06-21 15:31:36', 1, 0),
+(135, 'A arte dos memes', 37, 'Em &quot;A  arte dos memes&quot;, mergulhamos no mundo hilariante e viciante dos memes. Conhe&ccedil;a Alex, um jovem criativo e apaixonado pela internet, que descobre o poder dos memes para fazer as pessoas rirem e se conectarem. Com seu talento para criar conte&uacute;do viral, Alex se torna um dos maiores influencers da internet, levando a &quot;Arte dos Memes&quot; a um novo patamar.', 'Livre', '2023-06-21 12:47:15', '83e2db140be7c839a70f3a3053a18a0dobracomedia.jpg', '2023-06-21 15:49:09', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -535,12 +548,12 @@ CREATE TABLE `rankeamento` (
 --
 
 INSERT INTO `rankeamento` (`IDRAN`, `rankPontosRAN`, `levelRAN`, `expRAN`, `maxExpRAN`, `user_FKRAN`) VALUES
-(2, 70, 1, 0, 100, 37),
+(2, 80, 1, 0, 100, 37),
 (3, 0, 1, 0, 100, 29),
 (4, 0, 1, 0, 100, 41),
-(5, 0, 1, 0, 100, 44),
 (6, 0, 1, 0, 100, 46),
-(13, 0, 1, 0, 100, 69);
+(13, 0, 1, 0, 100, 69),
+(16, 0, 1, 0, 100, 72);
 
 -- --------------------------------------------------------
 
@@ -583,7 +596,8 @@ INSERT INTO `seguir` (`ID_seguir`, `user_FK`, `seguidor_FK`) VALUES
 (115, 37, 41),
 (117, 29, 37),
 (120, 37, 46),
-(121, 29, 46);
+(121, 29, 46),
+(124, 37, 69);
 
 -- --------------------------------------------------------
 
@@ -628,12 +642,12 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`ID_user`, `nome`, `codigo`, `email`, `foto`, `banner`, `descricaoUSU`, `chavePix`, `status`, `senha`, `data_cad`, `recuperar_senha`, `NOTmsg`, `NOTatdp`) VALUES
-(29, 'Ratsel', '@sifudiasnaomais77', 'ratsel00h@gmail.com', '', '721bd26ecd26294dd268e762e721c6b9pexels-photo-13271915.webp', 'Quando dizem que a primeira impress&atilde;o &eacute; a que fica, est&atilde;o dizendo a mais pura verdade! O seu perfil &eacute; a sua porta de entrada nas redes sociais, ent&atilde;o cuide bem dele e deixe-o bem atrativo para os seus visitantes! Frases para perfil s&atilde;o muito &uacute;teis na hora de fazer um resumo sobre si mesmo na sua conta online.', '', 0, '$2y$10$lY0nAUZ..kO9YzgUaqbXBe92nFSyp8KT0SwPMy8kcYWcNLGSE.0Wy', '2022-11-19', '', 1, 1),
-(37, 'Katsurazur4', '@katsurazur4170', 'ebooksquare.tcc@gmail.com', '', '', 'Descri&ccedil;&atilde;o &eacute; o texto que cont&eacute;m informa&ccedil;&otilde;es detalhadas sobre as caracter&iacute;sticas de algo ou algu&eacute;m. Assim, ela possibilita a pessoa que a l&ecirc; ou a ouve imaginar com facilidade o que est&aacute; sendo descrito - objetos, lugares, acontecimentos ou pessoas, como por exemplo. A descri&ccedil;&atilde;o pode contemplar aquilo que vemos - que s&atilde;o as caracter&iacute;sticas f&iacute;sicas', 'manda pix', 1, '$2y$10$0sLGvB2mphjI.6foQeUXwOaAgxxc30wJ0TSL/9yE89Sg5mb4KVGva', '2022-11-21', '', 1, 1),
+(29, 'Ratsel', '@sifudiasnaomais77', 'ratsel00h@gmail.com', 'ad5968dc8f2e700fa2ab4cea37dbb4a7urahara2.jpg', '5528eb81b1a100cd82f670d6d32b2f46calçadão.jpg', 'Quando dizem que a primeira impress&atilde;o &eacute; a que fica, est&atilde;o dizendo a mais pura verdade! O seu perfil &eacute; a sua porta de entrada nas redes sociais, ent&atilde;o cuide bem dele e deixe-o bem atrativo para os seus visitantes! Frases para perfil s&atilde;o muito &uacute;teis na hora de fazer um resumo sobre si mesmo na sua conta online.', '', 0, '$2y$10$lY0nAUZ..kO9YzgUaqbXBe92nFSyp8KT0SwPMy8kcYWcNLGSE.0Wy', '2022-11-19', '', 1, 1),
+(37, 'Katsurazur4', '@katsurazur4170', 'ebooksquare.tcc@gmail.com', '4d827bf32a2a9add1524771db6506ba9WhatsApp_Image_2023-06-21_at_12.38.40_PM.jpeg', '687a9b11a3c89dfa4bf637446c718340ppkats.gif', 'Descri&ccedil;&atilde;o &eacute; o texto que cont&eacute;m informa&ccedil;&otilde;es detalhadas sobre as caracter&iacute;sticas de algo ou algu&eacute;m. Assim, ela possibilita a pessoa que a l&ecirc; ou a ouve imaginar com facilidade o que est&aacute; sendo descrito - objetos, lugares, acontecimentos ou pessoas, como por exemplo. A descri&ccedil;&atilde;o pode contemplar aquilo que vemos - que s&atilde;o as caracter&iacute;sticas f&iacute;sicas', '', 1, '$2y$10$0sLGvB2mphjI.6foQeUXwOaAgxxc30wJ0TSL/9yE89Sg5mb4KVGva', '2022-11-21', '', 1, 1),
 (41, 'Mohamed', '@mohamed007', 'Manito@gmail.com', '', '', 'randomly random\r\n', 'ratsel00h@gmail.com', 0, '$2y$10$7uMp6lY.48ppExHc9xj4nOiAzXZ0Gekd.tVPRljjm4yrBwJmt8tAi', '2022-12-07', '', 1, 1),
-(44, 'Maicon Junior', '@maiconjunior', 'maicon997476957@gmail.com', '', '', '', '', 0, '$2y$10$zzNYygn5MaSclM92t2kDoup/TbkaxtOxzJ9ihHZpcWQRT72BX32ja', '2023-03-27', '', 1, 1),
-(46, 'Anna Carrey', '@annecrry', 'robux@gmail.com', '', '', '📚🖋️ Ol&aacute;! Sou Anne Carrey, uma escritora indie de 22 anos apaixonada por palavras e contadora de hist&oacute;rias sombrias no universo cyberpunk. \r\n\r\n🕷️📖 Mergulho nas profundezas do terror, da fic&ccedil;&atilde;o e do mundo tecnol&oacute;gico, criando mundos dist&oacute;picos repletos de desafios e questionamentos. \r\n\r\n💀✨ Bem-vindo ao meu mundo de arrepios e implantes cibern&eacute;ticos! Aqui, compartilho meus livros, onde o futuro dist&oacute;pico se funde com a alta tecnologia, criando tramas envolventes e personagens complexos. Acompanhe-me nessa jornada macabra atrav&eacute;s de cidades neon e megacorpora&ccedil;&otilde;es sinistras. Junte-se a mim e desvende os segredos sombrios que se escondem nas entranhas do ciberespa&ccedil;o. 🌑🔍📚🌆', 'annecrry@gmail.com', 0, '$2y$10$dmY/vhcPjuP6S8AWV2nmb.6k988oatNhVBO4mkLqg8ZRLaUE8fOvG', '2023-03-29', '', 1, 1),
-(69, 'Felipe', '@felipe', 'fefecaje@hotmail.com', '', '', '', '', 0, '$2y$10$uehlUtaPLs21t.5xAljUWuhyMeHFUY62Edf3lVFpwTVgr5mBVsBdy', '2023-06-20', '', 1, 1);
+(46, 'Anna Carrey', '@annecrry', 'robux@gmail.com', 'dcb27b7e5057c704f36f3278536b1c07imganecrry.jpg', '85c1f866e13a520c793fc9de5eab12c0banneranecrry.jpg', '📚🖋️ Ol&aacute;! Sou Anne Carrey, uma escritora indie de 22 anos apaixonada por palavras e contadora de hist&oacute;rias sombrias no universo cyberpunk. \r\n\r\n🕷️📖 Mergulho nas profundezas do terror, da fic&ccedil;&atilde;o e do mundo tecnol&oacute;gico, criando mundos dist&oacute;picos repletos de desafios and questionamentos. \r\n\r\n💀✨ Bem-vindo ao meu mundo de arrepios e implantes cibern&eacute;ticos! Aqui, compartilho meus livros, onde o futuro dist&oacute;pico se funde com a alta tecnologia, criando tramas envolventes e personagens complexos. Acompanhe-me nessa jornada macabra atrav&eacute;s de cidades neon e megacorpora&ccedil;&otilde;es sinistras. Junte-se a mim e desvende os segredos sombrios que se escondem nas entranhas do ciberespa&ccedil;o. 🌑🔍📚🌆', '', 0, '$2y$10$dmY/vhcPjuP6S8AWV2nmb.6k988oatNhVBO4mkLqg8ZRLaUE8fOvG', '2023-03-29', '', 1, 1),
+(69, 'Felipe', '@felipe', 'fefecaje@hotmail.com', '60344ef01d16398693101775197b303acafé.jpg', 'a272ec89ebb65be7be371b11c655e6f6slam_duink.jpg', 'Eu sou o maicon', '', 0, '$2y$10$uehlUtaPLs21t.5xAljUWuhyMeHFUY62Edf3lVFpwTVgr5mBVsBdy', '2023-06-20', '', 1, 1),
+(72, 'ola', '@ola', 'maicon997476957@gmail.com', 'fd2632c34a26506e97f55c85c5b7209cthorfinn.jpg', '', '', '', 0, '$2y$10$L83.roaUMDirQeytHvBYZ.9S6MXbtICGrjjRfXKrouuM91ZpRFvLm', '2023-06-20', '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -661,7 +675,11 @@ INSERT INTO `view` (`IDView`, `user_FK`, `capitulo_FK`) VALUES
 (24, 29, 39),
 (25, 37, 50),
 (26, 41, 13),
-(27, 41, 50);
+(27, 41, 50),
+(34, 69, 64),
+(35, 37, 122),
+(36, 46, 122),
+(37, 69, 105);
 
 --
 -- Índices para tabelas despejadas
@@ -817,7 +835,7 @@ ALTER TABLE `view`
 -- AUTO_INCREMENT de tabela `amei`
 --
 ALTER TABLE `amei`
-  MODIFY `ID_amei` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `ID_amei` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT de tabela `bloqueio`
@@ -829,7 +847,7 @@ ALTER TABLE `bloqueio`
 -- AUTO_INCREMENT de tabela `capitulo`
 --
 ALTER TABLE `capitulo`
-  MODIFY `ID_capitulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `ID_capitulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
 
 --
 -- AUTO_INCREMENT de tabela `categoria`
@@ -841,7 +859,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de tabela `categoria_da_obra`
 --
 ALTER TABLE `categoria_da_obra`
-  MODIFY `IDCatObr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=331;
+  MODIFY `IDCatObr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=423;
 
 --
 -- AUTO_INCREMENT de tabela `checkweek`
@@ -853,7 +871,7 @@ ALTER TABLE `checkweek`
 -- AUTO_INCREMENT de tabela `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `ID_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `ID_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT de tabela `conquistas`
@@ -865,37 +883,37 @@ ALTER TABLE `conquistas`
 -- AUTO_INCREMENT de tabela `favorito`
 --
 ALTER TABLE `favorito`
-  MODIFY `IDFav` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `IDFav` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT de tabela `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `ID_like` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=251;
+  MODIFY `ID_like` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=256;
 
 --
 -- AUTO_INCREMENT de tabela `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `notificacao`
 --
 ALTER TABLE `notificacao`
-  MODIFY `IDNOT` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `IDNOT` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT de tabela `obra`
 --
 ALTER TABLE `obra`
-  MODIFY `ID_obra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
+  MODIFY `ID_obra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT de tabela `rankeamento`
 --
 ALTER TABLE `rankeamento`
-  MODIFY `IDRAN` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `IDRAN` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de tabela `report`
@@ -907,7 +925,7 @@ ALTER TABLE `report`
 -- AUTO_INCREMENT de tabela `seguir`
 --
 ALTER TABLE `seguir`
-  MODIFY `ID_seguir` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
+  MODIFY `ID_seguir` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 
 --
 -- AUTO_INCREMENT de tabela `user_conq`
@@ -919,13 +937,13 @@ ALTER TABLE `user_conq`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `ID_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `ID_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT de tabela `view`
 --
 ALTER TABLE `view`
-  MODIFY `IDView` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `IDView` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- Restrições para tabelas despejadas

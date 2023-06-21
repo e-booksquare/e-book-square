@@ -8,7 +8,7 @@ $classLog = new log();
 if (isset($_POST["nome"])) {
 	$tituloObra = $_POST['nome'];
 	$titles = $classLog->findAll(['ID_obra, nome_obra'], 'obra', 
-	[" WHERE nome_obra LIKE '%".$tituloObra."%' LIMIT 15"]);
+	[" WHERE nome_obra LIKE '%".$tituloObra."%' LIMIT 6"]);
 
 	if(count($titles) == 0){
 		echo "Nenhum resultado encontrado para ' <strong>$tituloObra</strong> '";

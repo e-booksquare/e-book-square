@@ -863,7 +863,7 @@ class log
                                 <div class='container_not'>
                                     <p class='novo_notificacao'><span>$new</span></p>
                                     <input type='checkbox' name='not' id='selecionar' class='selecao' value='$IDNOT'>
-                                    <img src='$fotoNOT->imgUser' alt=''>
+                                    <img src='$fotoNOT->imgUser' alt='' id='imgNot'>
                                     <p>
                                         $nomeNOT
                                         <span style='font-weight: 100;'>

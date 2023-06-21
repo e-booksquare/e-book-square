@@ -11,6 +11,12 @@ body{
     background-color: #16171B;;
 }
 
+#leaveChat{
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+
 #chatList{
     float: left;
     width: 30%;

@@ -17,12 +17,10 @@ function renderDados($classLog){
 
     foreach ($comentarios as $key => $cmt) {
 
-      $UserCmt = $classLog->find(["ID_user, nome, codigo, foto"], "usuario", ["WHERE ID_user = ".$cmt['user_FK']]);
-      $imgPerfil = $classLog->ifProfileImgExist($UserCmt['foto'], null);
-      $IDCmt = $cmt['ID_comentario'];
-      $subCmts = $classLog->findAll(["*"], "comentario", ["WHERE tipo = 6 and ID_tipo = $IDCmt"]);
-
-   echo cmtContentComp($cmt['user_FK'], $UserCmt['nome'], $UserCmt['codigo'], $imgPerfil, $cmt['conteudo'], $cmt['created_at'], $classLog);
+    $UserCmt = $classLog->find(["ID_user, nome, codigo, foto"], "usuario", ["WHERE ID_user = ".$cmt['user_FK']]);
+    $imgPerfil = $classLog->ifProfileImgExist($UserCmt['foto'], null);
+    $IDCmt = $cmt['ID_comentario'];
+    echo cmtContentComp($cmt['user_FK'], $UserCmt['nome'], $UserCmt['codigo'], $imgPerfil, $cmt['conteudo'], $cmt['created_at'], $classLog);
     
 
 

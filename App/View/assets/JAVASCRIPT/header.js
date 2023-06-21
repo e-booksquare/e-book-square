@@ -107,7 +107,6 @@ $(document).ready(function (){
                     delNot: true,
                     IDNOT_CHK: arr,
                 },
-                success: (e) => alert(e)
             })
     
             getNotList(1,"minha_historia_not");
