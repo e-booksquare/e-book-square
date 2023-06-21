@@ -833,6 +833,7 @@ background-image: none !important;
 .codigo_seguidor{
     color: white;
     font-weight: bold;
+    margin-top: -60px;
 }
 
 .nivel_seguidor{

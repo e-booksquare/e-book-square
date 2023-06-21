@@ -192,8 +192,8 @@ if ($_GET['obra']) {
                                         <i class="bi bi-pencil-square icon_cap"></i>
                                     </button>
                                 </a>
-                                    <div style='cursor: pointer;' onclick="modal_exclusao(<?=$value['ID_capitulo'];?>, '<?=$tituloCap?>', <?=$idObra?>)">
-                                        <i class="bi bi-trash-fill icon_cap"></i>
+                                    <div style='cursor: pointer;'>
+                                        <a href="../../Model/valida_cap.php?method=remove&obra=<?=$idObra ?>&cap=<?= $value['ID_capitulo']; ?>"><i class="bi bi-trash-fill icon_cap"></i></a>
                                     </div>
                             </div>
                         <?php } ?>

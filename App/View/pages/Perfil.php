@@ -55,42 +55,7 @@
     </div>
 
 
-    <div class="modal_doacoes" id="modal_doacoesId">
-        <div class="header_doacoes">
-            <div class="icon_fechar_doacoes">
-                <i onclick="fechar_doacoes()" class="bi bi-x-lg"></i>
-            </div>
-            
-            <p class="titulo_header_doacoes">Contribuição</p>
-            <p class="texto_doacoes">Faça uma contribuição para ajudar e motivar o autor !!<p>
-        </div>
-        <div class="cod_pix-user">
 
-            <div class="cod">
-                <img class="pix_icon" src="https://th.bing.com/th/id/OIP.YpTXXBQdZpq8ClD7Ok7xEQHaCv?pid=ImgDet&w=631&h=234&rs=1">
-                <img class="Qrcode" src="https://www.pngall.com/wp-content/uploads/2/QR-Code-PNG-Photo.png" alt="">
-                <p><span class="texto_doacoes">Chave PIX: </span><span class="texto_doacoes" name="chave_pix"><?= $dadosUserPerfil['chavePix']; ?></span></p>
-            </div>
-            <div class="barra_ou">
-                <div class="barra_doacoes"></div> 
-                <p>OU<p>
-                <div class="barra_doacoes"></div>
-            </div>
-            <div class="user_pix">
-                <p class="texto_doacoes">Entre em contato com o autor via chat</p>
-                <img class="imagem_user_doacoes" src="
-                <?php if (isset($dadosUserPerfil['foto']) && !empty($dadosUserPerfil['foto'])) { ?>
-                        ../assets/IMAGEM_USUARIO/<?= $dadosUserPerfil['foto']; ?>
-                    <?php } else { ?>
-                        ../assets/IMAGENS/blank.jpg
-                    <?php } ?> 
-                " alt="">
-                <p><?= $dadosUserPerfil['codigo']; ?></p>
-                <p class="botao_char_user" >Falar com <?= $dadosUserPerfil['nome']; ?></p>
-            </div>
-        </div>
-        <p class="fechar" onclick="fechar_doacoes()">Fechar</p>
-    </div>
 
 
     <main id="main" class="">
@@ -121,11 +86,6 @@
                     </div>
                 </div>
                 <?php if ($_SESSION['ID_user'] != $_GET['user']) {?>
-                <div onclick="modal_doacoes()" class="doacoes" id="IdDoacoes">
-                    <a href="#top" style="height: 55px;">
-                        <img src="../assets/IMAGENS/doacoes.png" alt="">
-                    </a>
-                </div>
                 <?php }?>
             </div>
 

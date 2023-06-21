@@ -776,7 +776,7 @@ class log
 
     function getObraImg($img)
     {
-        $imgObra = "../assets/IMAGENS/default5.jpeg";;
+        $imgObra = "../assets/IMAGENS/default5.jpeg";
 
         if (isset($img) && !empty($img)) {
 

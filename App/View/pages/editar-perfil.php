@@ -87,18 +87,7 @@ if(isset($_SESSION['msg-perfil-edit']) ){
 
             <hr style=" border-color: black; width:90%; margin-bottom: 30px;margin-top: 20px;">
 
-            <p class="Titulo_trocar_descricao">Adicionar chave do PIX</p>
-
-
-            <div class="contato_doacoes">
-                <div class="container_pix containers_contatos">
-                    <img src="..\assets\IMAGENS\logo_pix.png" alt="">
-                    <input maxlength="20" class="Pix_contato input_doacoes"
-                        placeholder="Pix: <?= $dados_usuario['chavePix']; ?>" type="text" name="pix" id="pix" 
-                        value="<?=$dados_usuario['chavePix'] ?>"
-                        onClick="this.setSelectionRange(0, this.value.length)">
-                </div>
-            </div>
+            
 
             <div class="salvar_voltar">
                 <a class="voltar" href="perfil.php?user=<?=$_SESSION['ID_user'];?>">voltar</a> 
